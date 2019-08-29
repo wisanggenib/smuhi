@@ -1,0 +1,17 @@
+.navigasi1{
+	background-color: blue;
+	height: 50px;
+}
+.baris{
+	content: '';
+	height: 20px;
+	background-color: yellow;
+}
+.navigasi2{
+	  height: 100vh;
+  min-height: 500px;
+  background-image: url('../img/basic/bg1.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
