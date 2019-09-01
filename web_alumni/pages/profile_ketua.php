@@ -50,38 +50,39 @@
               <div class="single-sidebar-widget popular-post-widget">
                 <h4 class="popular-title">BERITA TERBARU</h4>
                 <div class="popular-post-list">
-                  <div class="single-post-list d-flex flex-row align-items-center">
-                    <div class="thumb">
-                      <img class="img-fluid" src="img/blog/pp1.jpg" alt="">
-                    </div>
-                    <div class="details">
-                      <a href="blog-single.html"><h6>Space The Final Frontier</h6></a>
-                      <p>02 Hours ago</p>
-                      <hr size="15px;" color="#FFFF00">
-                    </div>
-                  </div>
-                  <div class="single-post-list d-flex flex-row align-items-center">
-                    <div class="thumb">
-                      <img class="img-fluid" src="img/blog/pp2.jpg" alt="">
-                    </div>
-                    <div class="details">
-                      <a href="blog-single.html"><h6>The Amazing Hubble</h6></a>
-                      <p>02 Hours ago</p>
-                      <hr size="15px;" color="#FFFF00">
-                    </div>
-                  </div>
-                  <div class="single-post-list d-flex flex-row align-items-center">
-                    <div class="thumb">
-                      <img class="img-fluid" src="img/blog/pp3.jpg" alt="">
-                    </div>
-                    <div class="details">
-                      <a href="blog-single.html"><h6>Astronomy Or Astrology</h6></a>
-                      <p>02 Hours ago</p>
-                      <hr size="15px;" color="#FFFF00">
-                    </div>
-                  </div>
+
+                  <?php
+
+                    $sql = mysqli_query($config, "SELECT * FROM tbl_berita INNER JOIN tbl_admin ON tbl_berita.id_admin = tbl_admin.id_admin ORDER BY tbl_berita.id_berita DESC LIMIT 3");
+                    while($berita = mysqli_fetch_array($sql)){
+
+                      $long_string = $berita['deskripsi'];
+                      $des = limit_words($long_string, 5);
+
+                      $long = $berita['judul_berita'];
+                      $des2 = limit_words($long, 3);
+                      ?>
+                        <div class="col-lg-12 col-md-12">
+                          <div class="row">
+                            <div class="col-lg-5 col-md-5">
+                              <img class="img-fluid" src="img/berita/<?=$berita['images_berita']?>" alt="" width="100px" style="border-radius : 5px;">
+                            </div>
+                            <div class="col-lg-7 col-md-7">
+                              <a href="index.php?page=detail_berita&&id=<?=$berita['id_berita']?>"><h6><?=$des2?> ...</h6></a>
+                              <i class="fa fa-clock-o"> <?=$berita['tanggal']?></i>
+                              <p><?=$des?></p>
+                              <hr size="15px;" color="#FFFF00">
+                            </div>
+                          </div>
+                        </div>
+                      <?php
+                    }
+
+                  ?>
+                  
+
                   <div class="" align ="right">
-                    <a href="#">Lihat Selengkapnya <i class="fa fa-chevron-circle-right"></i></a>
+                    <a href="index.php?page=berita">Lihat Selengkapnya <i class="fa fa-chevron-circle-right"></i></a>
                   </div>
                 </div>
               </div>

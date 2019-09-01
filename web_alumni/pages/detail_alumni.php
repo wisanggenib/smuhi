@@ -25,61 +25,71 @@
             <div class="row" style="margin : 10px;">
               <div class="col-lg-12 col-md-12 col-sm-12">
                 <div class="row">
-                  <div class="col-lg-5 col-md-5 col-sm-5">
-                    <img src="img/tm-4.jpg" alt="" width="100%">
-                  </div>
-                  <div class="col-lg-7 col-md-7 col-sm-7">
-                    <h4>MARUF AZIZ</h4>
-                    <hr size="15px;" color="#FFFF00" align="left" width="20%;">
-                    <table class="table">
-                        <tr>
-                          <td>Tahun Lulus</td>
-                          <td>:</td>
-                          <td>1996</td>
-                        </tr>
-                        <tr>
-                          <td>Mobile Phones</td>
-                          <td>:</td>
-                          <td>0084854056465</td>
-                        </tr>
-                        <tr>
-                          <td>Email</td>
-                          <td>:</td>
-                          <td>sdjhish@ijio</td>
-                        </tr>
-                        <tr>
-                          <td>Alamat Rumah</td>
-                          <td>:</td>
-                          <td>Jl Merpati</td>
-                        </tr>
-                        <tr>
-                          <td>kantor</td>
-                          <td>:</td>
-                          <td>0084854056465</td>
-                        </tr>
-                        <tr>
-                          <td>ALamat Kantor</td>
-                          <td>:</td>
-                          <td>0084854056465</td>
-                        </tr>
-                    </table>
-                    <a href="#">
-                      <i class="fa fa-facebook fa-lg" style="margin : 10px;"></i>
-                    </a>
-                    <a href="#">
-                      <i class="fa fa-twitter fa-lg" style="margin : 10px;"></i>
-                    </a>
-                    <a href="`#`">
-                      <i class="fa fa-instagram fa-lg" style="margin : 10px;"></i>
-                    </a>
-                    <a href="`#`">
-                      <i class="fa fa-whatsapp fa-lg" style="margin : 10px;"></i>
-                    </a>
-                  </div>
+                  <?php
+                    $id = $_GET['id'];
+                    $sql = mysqli_query($config, "SELECT * FROM tbl_alumni WHERE id_alumni = $id");
+                    while($data = mysqli_fetch_array($sql)){
+                      ?>
+                        <div class="col-lg-5 col-md-5 col-sm-5">
+                          <img src="img/alumni/<?=$data['images']?>" alt="" width="100%">
+                        </div>
+                        <div class="col-lg-7 col-md-7 col-sm-7">
+                          <h4><?=$data['nama_alumni']?></h4>
+                          <hr size="15px;" color="#FFFF00" align="left" width="20%;">
+                          <table class="table">
+                              <tr>
+                                <td>Tahun Lulus</td>
+                                <td>:</td>
+                                <td><?=$data['tahun_lulus']?></td>
+                              </tr>
+                              <tr>
+                                <td>Mobile Phones</td>
+                                <td>:</td>
+                                <td><?=$data['no_telp']?></td>
+                              </tr>
+                              <tr>
+                                <td>Email</td>
+                                <td>:</td>
+                                <td><?=$data['email']?></td>
+                              </tr>
+                              <tr>
+                                <td>Alamat Rumah</td>
+                                <td>:</td>
+                                <td><?=$data['alamat_rumah']?></td>
+                              </tr>
+                              <tr>
+                                <td>kantor</td>
+                                <td>:</td>
+                                <td><?=$data['kantor']?></td>
+                              </tr>
+                              <tr>
+                                <td>ALamat Kantor</td>
+                                <td>:</td>
+                                <td><?=$data['alamat_kantor']?></td>
+                              </tr>
+                          </table>
+                          
+                          <a href="">
+                            <i class="fa fa-facebook fa-lg" style="margin : 10px;"></i>
+                          </a>
+                          <a href="#">
+                            <i class="fa fa-twitter fa-lg" style="margin : 10px;"></i>
+                          </a>
+                          <a href="">
+                            <i class="fa fa-instagram fa-lg" style="margin : 10px;"></i>
+                          </a>
+                          <a href="">
+                            <i class="fa fa-whatsapp fa-lg" style="margin : 10px;"></i>
+                          </a>
+                        </div>
+                      <?php
+                    }
+                  ?>
+
                 </div>
               </div>
 
-              <h4 style="background: orange; width: 200px; margin-top : 20px; margin-button : 10px;">RIWAYAT PENDIDIKAN</h4>
+              <h4 style="background: orange; width: 250px; margin-top : 20px; margin-button : 10px;">RIWAYAT PENDIDIKAN</h4>
               <table class="table table-hover">
                 <thead>
                   <tr align="center">
@@ -89,11 +99,20 @@
                   </tr>
                 </thead>
                 <tbody>
-                  <tr>
-                    <td align="center">1</td>
-                    <td>SMA 1 BARAT</td>
-                    <td align="center">2017</td>
-                  </tr>
+                  <?php
+                    $id = $_GET['id'];
+                    $no = 1;
+                    $sql = mysqli_query($config,"SELECT * FROM tbl_riwayat_alumni WHERE id_alumni = $id ORDER BY pendidikan_lulus ASC");
+                    while($data = mysqli_fetch_array($sql)){
+                      ?>
+                        <tr>
+                          <td align="center"><?=$no++?></td>
+                          <td><?=$data['pendidikan']?></td>
+                          <td align="center"><?=$data['pendidikan_lulus']?></td>
+                        </tr>
+                      <?php
+                    }
+                  ?>
                 </tbody>
               </table>
             </div>
@@ -105,38 +124,38 @@
               <div class="single-sidebar-widget popular-post-widget">
                 <h4 class="popular-title">BERITA TERBARU</h4>
                 <div class="popular-post-list">
-                  <div class="single-post-list d-flex flex-row align-items-center">
-                    <div class="thumb">
-                      <img class="img-fluid" src="img/blog/pp1.jpg" alt="">
-                    </div>
-                    <div class="details">
-                      <a href="blog-single.html"><h6>Space The Final Frontier</h6></a>
-                      <p>02 Hours ago</p>
-                      <hr size="15px;" color="#FFFF00">
-                    </div>
-                  </div>
-                  <div class="single-post-list d-flex flex-row align-items-center">
-                    <div class="thumb">
-                      <img class="img-fluid" src="img/blog/pp2.jpg" alt="">
-                    </div>
-                    <div class="details">
-                      <a href="blog-single.html"><h6>The Amazing Hubble</h6></a>
-                      <p>02 Hours ago</p>
-                      <hr size="15px;" color="#FFFF00">
-                    </div>
-                  </div>
-                  <div class="single-post-list d-flex flex-row align-items-center">
-                    <div class="thumb">
-                      <img class="img-fluid" src="img/blog/pp3.jpg" alt="">
-                    </div>
-                    <div class="details">
-                      <a href="blog-single.html"><h6>Astronomy Or Astrology</h6></a>
-                      <p>02 Hours ago</p>
-                      <hr size="15px;" color="#FFFF00">
-                    </div>
-                  </div>
+                  <?php
+
+                  $sql = mysqli_query($config, "SELECT * FROM tbl_berita INNER JOIN tbl_admin ON tbl_berita.id_admin = tbl_admin.id_admin ORDER BY tbl_berita.id_berita DESC LIMIT 3");
+                  while($berita = mysqli_fetch_array($sql)){
+
+                    $long_string = $berita['deskripsi'];
+                    $des = limit_words($long_string, 5);
+
+                    $long = $berita['judul_berita'];
+                    $des2 = limit_words($long, 3);
+                    ?>
+                      <div class="col-lg-12 col-md-12">
+                        <div class="row">
+                          <div class="col-lg-5 col-md-5">
+                            <img class="img-fluid" src="img/berita/<?=$berita['images_berita']?>" alt="" width="100px" style="border-radius : 5px;">
+                          </div>
+                          <div class="col-lg-7 col-md-7">
+                            <a href="index.php?page=detail_berita&&id=<?=$berita['id_berita']?>"><h6><?=$des2?> ...</h6></a>
+                            <i class="fa fa-clock-o"> <?=$berita['tanggal']?></i>
+                            <p><?=$des?></p>
+                            <hr size="15px;" color="#FFFF00">
+                          </div>
+                        </div>
+                      </div>
+                    <?php
+                  }
+
+                  ?>
+
+
                   <div class="" align ="right">
-                    <a href="#">Lihat Selengkapnya <i class="fa fa-chevron-circle-right"></i></a>
+                  <a href="index.php?page=berita">Lihat Selengkapnya <i class="fa fa-chevron-circle-right"></i></a>
                   </div>
                 </div>
               </div>
