@@ -67,36 +67,28 @@
               <div class="single-sidebar-widget popular-post-widget">
                 <h4 class="popular-title">LOWONGAN KERJA</h4>
                 <div class="popular-post-list">
-                  <div class="single-post-list d-flex flex-row align-items-center">
-                    <div class="thumb">
-                      <img class="img-fluid" src="img/blog/pp1.jpg" alt="">
-                    </div>
-                    <div class="details">
-                      <a href="blog-single.html"><h6>Space The Final Frontier</h6></a>
-                      <p>02 Hours ago</p>
-                      <hr size="15px;" color="#FFFF00">
-                    </div>
-                  </div>
-                  <div class="single-post-list d-flex flex-row align-items-center">
-                    <div class="thumb">
-                      <img class="img-fluid" src="img/blog/pp2.jpg" alt="">
-                    </div>
-                    <div class="details">
-                      <a href="blog-single.html"><h6>The Amazing Hubble</h6></a>
-                      <p>02 Hours ago</p>
-                      <hr size="15px;" color="#FFFF00">
-                    </div>
-                  </div>
-                  <div class="single-post-list d-flex flex-row align-items-center">
-                    <div class="thumb">
-                      <img class="img-fluid" src="img/blog/pp3.jpg" alt="">
-                    </div>
-                    <div class="details">
-                      <a href="blog-single.html"><h6>Astronomy Or Astrology</h6></a>
-                      <p>02 Hours ago</p>
-                      <hr size="15px;" color="#FFFF00">
-                    </div>
-                  </div>
+
+                  <?php
+
+                    $sql = mysqli_query($config,"SELECT * FROM tbl_lowongan_kerja ORDER BY tanggal DESC");
+                    while($loker = mysqli_fetch_array($sql)){
+
+                      ?>
+                        <div class="single-post-list d-flex flex-row align-items-center">
+                          <div class="">
+                            <img class="img-fluid" src="img/lowongan/<?=$loker['logo']?>" alt="" width="100px" style="border-radius : 5px;">
+                          </div>
+                          <div class="details">
+                            <a href="index.php?page=detail_lowongan&&id=<?=$loker['lowongan_id']?>"><h6><?=$loker['nama_perusahaan']?></h6></a>
+                            <i class="fa fa-clock-o"></i>
+                            <p><?=$loker['tanggal']?></p>
+                            <hr size="15px;" color="#FFFF00">
+                          </div>
+                        </div>
+                      <?php
+                    }
+                    ?>
+
                   <div class="" align ="right">
                     <a href="#">Lihat Selengkapnya <i class="fa fa-chevron-circle-right"></i></a>
                   </div>

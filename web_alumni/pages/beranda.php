@@ -32,76 +32,50 @@
             <h4>LOWONGAN KERJA</h4>
           </div>
           <div class="desc-wrap" align="left">
-            <div class="col-lg-12 col-md-12 col-sm-12">
-              <div class="row">
-                <div class="col-lg-4 col-md-4 col-sm-4">
-                  <img src="img/user-256.png" width = "75px" alt="" style="border-radius : 100%;">
-                </div>
-                <div class="col-lg-8 col-md-8 col-sm-8">
-                  <ul>
-                    <li>
-                      <h4>PT. MAJU BERSAMA</h4>
-                    </li>
-                    <li>
-                      <i class="fa fa-clock-o"> 10 Agustus 2019</i>
-                    </li>
-                    <li>
-                      <p>Deskripsi Singkat ...</p>
-                    </li>
-                  </ul>
-                  <hr size="15px;" color="#FFFF00">
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-12 col-md-12 col-sm-12">
-              <div class="row">
-                <div class="col-lg-4 col-md-4 col-sm-4">
-                  <img src="img/user-256.png" width = "75px" alt="" style="border-radius : 100%;">
-                </div>
-                <div class="col-lg-8 col-md-8 col-sm-8">
-                  <ul>
-                    <li>
-                      <h4>PT. MAJU BERSAMA</h4>
-                    </li>
-                    <li>
-                      <i class="fa fa-clock-o"> 10 Agustus 2019</i>
-                    </li>
-                    <li>
-                      <p>Deskripsi Singkat ...</p>
-                    </li>
-                  </ul>
-                  <hr size="15px;" color="#FFFF00">
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-12 col-md-12 col-sm-12">
-              <div class="row">
-                <div class="col-lg-4 col-md-4 col-sm-4">
-                  <img src="img/user-256.png" width = "75px" alt="" style="border-radius : 100%;">
-                </div>
-                <div class="col-lg-8 col-md-8 col-sm-8">
-                  <ul>
-                    <li>
-                      <h4>PT. MAJU BERSAMA</h4>
-                    </li>
-                    <li>
-                      <i class="fa fa-clock-o"> 10 Agustus 2019</i>
-                    </li>
-                    <li>
-                      <p>Deskripsi Singkat ...</p>
-                    </li>
-                  </ul>
-                  <hr size="15px;" color="#FFFF00">
-                </div>
-              </div>
-            </div>
 
+            <?php
+              
+              $sql = mysqli_query($config,"SELECT * FROM tbl_lowongan_kerja ORDER BY tanggal DESC");
+              while($loker = mysqli_fetch_array($sql)){
+
+                $long_string = $loker['deskripsi'];
+                $des = limit_words($long_string, 5);
+                ?>
+                  <div class="col-lg-12 col-md-12 col-sm-12">
+                    <div class="row">
+                      <div class="col-lg-4 col-md-4 col-sm-4">
+                        <img src="img/lowongan/<?=$loker['logo']?>" width = "75px" alt="" style="border-radius : 5px;">
+                      </div>
+                      <div class="col-lg-8 col-md-8 col-sm-8">
+                        <ul>
+                          <li>
+                            <a href="index.php?page=detail_lowongan&&id=<?=$loker['lowongan_id']?>">
+                              <h4><?=$loker['nama_perusahaan']?></h4>
+                            </a>                            
+                          </li>
+                          <li>
+                            <i class="fa fa-clock-o"> <?=$loker['tanggal']?></i>
+                          </li>
+                          <li>
+                            <p><?=$des?> ...</p>
+                          </li>
+                        </ul>
+                        <hr size="15px;" color="#FFFF00">
+                      </div>
+                    </div>
+                  </div>
+                <?php
+
+              }
+              ?>
+              
             <div class="" align ="right">
-              <a href="#"><i>Lihat Selengkapnya</i> <i class="fa fa-chevron-circle-right"></i></a>
+              <a href="index.php?page=lowongan_kerja"><i>Lihat Selengkapnya</i> <i class="fa fa-chevron-circle-right"></i></a>
             </div>
           </div>
         </div>
       </div>
+
       <div class="col-lg-4">
         <div class="single-feature">
           <div class="title" style="background : #2a43aa;">
