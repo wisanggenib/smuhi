@@ -147,21 +147,25 @@
 
                   <?php
 
-                    $sql = mysqli_query($config,"SELECT * FROM tbl_lowongan_kerja ORDER BY tanggal DESC");
+                    $sql = mysqli_query($config,"SELECT * FROM tbl_lowongan_kerja ORDER BY tanggal DESC LIMIT 3");
                     while($loker = mysqli_fetch_array($sql)){
-
+                      
+                      $long_string = $loker['deskripsi'];
+                      $des = limit_words($long_string, 5);
                       ?>
-                        <div class="single-post-list d-flex flex-row align-items-center">
-                          <div class="">
+                      <div class="col-lg-12 col-md-12">
+                        <div class="row">
+                          <div class="col-lg-5 col-md-5">
                             <img class="img-fluid" src="img/lowongan/<?=$loker['logo']?>" alt="" width="100px" style="border-radius : 5px;">
                           </div>
-                          <div class="details">
+                          <div class="col-lg-7 col-md-7">
                             <a href="index.php?page=detail_lowongan&&id=<?=$loker['lowongan_id']?>"><h6><?=$loker['nama_perusahaan']?></h6></a>
-                            <i class="fa fa-clock-o"></i>
-                            <p><?=$loker['tanggal']?></p>
+                            <i class="fa fa-clock-o"> <?=$loker['tanggal']?></i>
+                            <p><?=$des?></p>
                             <hr size="15px;" color="#FFFF00">
                           </div>
                         </div>
+                      </div>
                       <?php
                     }
                   ?>

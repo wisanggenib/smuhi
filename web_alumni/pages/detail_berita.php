@@ -18,23 +18,31 @@
   <div class="container">
       <div class="row">
           <div class="col-lg-8 col-md-8 col-sm-8 posts-list">
-            <h3 style="margin : 10px;">Kurban Wadah Silaturahmi</h3>
-            <div class="" style="margin : 10px;">
-              <i class="fa fa-calendar"> 10 Agustus 2019</i>
-              <i class="fa fa-user">Admin</i>
-            </div>
-            <img src="img/banner-bg.jpg" alt="" width="100%" style="margin-bottom : 15px;">
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-            <blockquote class="generic-blockquote">
-              <p style="font-size : 12px;">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-              </p>
-            </blockquote>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
+            <?php
+              
+              $id = $_GET['id'];
+              $sql = mysqli_query($config, "SELECT * FROM tbl_berita INNER JOIN tbl_admin ON tbl_berita.id_admin = tbl_admin.id_admin WHERE tbl_berita.id_berita = $id");
+              while($berita = mysqli_fetch_array($sql))
+              {
+                ?>
+                  <h3 style="margin : 10px;"><?=$berita['judul_berita']?></h3>
+                  <div class="" style="margin : 10px;">
+                    <i class="fa fa-calendar"> <?=$berita['tanggal']?></i>
+                    <i class="fa fa-user"> <?=$berita['username']?></i>
+                  </div>
+                  <img src="img/berita/<?=$berita['images_berita']?>" alt="" width="100%" style="margin-bottom : 15px;">
+                  <p>
+                    <?=$berita['deskripsi']?>
+                  </p>
+                  <blockquote class="generic-blockquote">
+                    <p style="font-size : 12px;">
+                      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    </p>
+                  </blockquote>
+                <?php
+              }
+
+            ?>            
 
             <div class="comentar" style="margin-top : 40px;">
               <h4>Komentar :</h4>
@@ -147,23 +155,27 @@
 
                   <?php
 
-                  $sql = mysqli_query($config,"SELECT * FROM tbl_lowongan_kerja ORDER BY tanggal DESC");
-                  while($loker = mysqli_fetch_array($sql)){
-
-                    ?>
-                      <div class="single-post-list d-flex flex-row align-items-center">
-                        <div class="">
-                          <img class="img-fluid" src="img/lowongan/<?=$loker['logo']?>" alt="" width="100px" style="border-radius : 5px;">
-                        </div>
-                        <div class="details">
-                          <a href="index.php?page=detail_lowongan&&id=<?=$loker['lowongan_id']?>"><h6><?=$loker['nama_perusahaan']?></h6></a>
-                          <i class="fa fa-clock-o"></i>
-                          <p><?=$loker['tanggal']?></p>
-                          <hr size="15px;" color="#FFFF00">
+                    $sql = mysqli_query($config,"SELECT * FROM tbl_lowongan_kerja ORDER BY tanggal DESC LIMIT 3");
+                    while($loker = mysqli_fetch_array($sql)){
+                      
+                      $long_string = $loker['deskripsi'];
+                      $des = limit_words($long_string, 5);
+                      ?>
+                      <div class="col-lg-12 col-md-12">
+                        <div class="row">
+                          <div class="col-lg-5 col-md-5">
+                            <img class="img-fluid" src="img/lowongan/<?=$loker['logo']?>" alt="" width="100px" style="border-radius : 5px;">
+                          </div>
+                          <div class="col-lg-7 col-md-7">
+                            <a href="index.php?page=detail_lowongan&&id=<?=$loker['lowongan_id']?>"><h6><?=$loker['nama_perusahaan']?></h6></a>
+                            <i class="fa fa-clock-o"> <?=$loker['tanggal']?></i>
+                            <p><?=$des?></p>
+                            <hr size="15px;" color="#FFFF00">
+                          </div>
                         </div>
                       </div>
-                    <?php
-                  }
+                      <?php
+                    }
                   ?>
 
                   <div class="" align ="right">

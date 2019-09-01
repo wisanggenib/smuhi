@@ -35,7 +35,7 @@
 
             <?php
               
-              $sql = mysqli_query($config,"SELECT * FROM tbl_lowongan_kerja ORDER BY tanggal DESC");
+              $sql = mysqli_query($config,"SELECT * FROM tbl_lowongan_kerja ORDER BY tanggal DESC LIMIT 3");
               while($loker = mysqli_fetch_array($sql)){
 
                 $long_string = $loker['deskripsi'];
@@ -82,69 +82,42 @@
             <h4>PENAWARAN JASA</h4>
           </div>
           <div class="desc-wrap" align="left">
-            <div class="col-lg-12 col-md-12 col-sm-12">
-              <div class="row">
-                <div class="col-lg-4 col-md-4 col-sm-4">
-                  <img src="img/user-256.png" width = "75px" alt="" style="border-radius : 100%;">
+            <?php
+
+              $sql = mysqli_query($config, "SELECT * FROM tbl_jasa ORDER BY id_jasa DESC LIMIT 3");
+              while($jasa = mysqli_fetch_array($sql)){
+
+                $long_string = $jasa['deskripsi'];
+                $des = limit_words($long_string, 5);
+
+                ?>
+                <div class="col-lg-12 col-md-12 col-sm-12">
+                  <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-4">
+                      <img src="img/jasa/<?=$jasa['logo']?>" width = "75px" alt="" style="border-radius : 10px;">
+                    </div>
+                    <div class="col-lg-8 col-md-8 col-sm-8">
+                      <ul>
+                        <li>
+                          <h4><?=$jasa['nama_perusahaan']?></h4>
+                        </li>
+                        <li>
+                          <i class="fa fa-clock-o"> <?=$jasa['tanggal']?></i>
+                        </li>
+                        <li>
+                          <p><?=$des?> ...</p>
+                        </li>
+                      </ul>
+                      <hr size="15px;" color="#FFFF00">
+                    </div>
+                  </div>
                 </div>
-                <div class="col-lg-8 col-md-8 col-sm-8">
-                  <ul>
-                    <li>
-                      <h4>PT. MAJU BERSAMA</h4>
-                    </li>
-                    <li>
-                      <i class="fa fa-clock-o"> 10 Agustus 2019</i>
-                    </li>
-                    <li>
-                      <p>Deskripsi Singkat ...</p>
-                    </li>
-                  </ul>
-                  <hr size="15px;" color="#FFFF00">
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-12 col-md-12 col-sm-12">
-              <div class="row">
-                <div class="col-lg-4 col-md-4 col-sm-4">
-                  <img src="img/user-256.png" width = "75px" alt="" style="border-radius : 100%;">
-                </div>
-                <div class="col-lg-8 col-md-8 col-sm-8">
-                  <ul>
-                    <li>
-                      <h4>PT. MAJU BERSAMA</h4>
-                    </li>
-                    <li>
-                      <i class="fa fa-clock-o"> 10 Agustus 2019</i>
-                    </li>
-                    <li>
-                      <p>Deskripsi Singkat ...</p>
-                    </li>
-                  </ul>
-                  <hr size="15px;" color="#FFFF00">
-                </div>
-              </div>
-            </div>
-            <div class="col-lg-12 col-md-12 col-sm-12">
-              <div class="row">
-                <div class="col-lg-4 col-md-4 col-sm-4">
-                  <img src="img/user-256.png" width = "75px" alt="" style="border-radius : 100%;">
-                </div>
-                <div class="col-lg-8 col-md-8 col-sm-8">
-                  <ul>
-                    <li>
-                      <h4>PT. MAJU BERSAMA</h4>
-                    </li>
-                    <li>
-                      <i class="fa fa-clock-o"> 10 Agustus 2019</i>
-                    </li>
-                    <li>
-                      <p>Deskripsi Singkat ...</p>
-                    </li>
-                  </ul>
-                  <hr size="15px;" color="#FFFF00">
-                </div>
-              </div>
-            </div>
+                <?php
+
+              }
+
+            ?>
+            
 
             <div class="" align ="right">
               <a href="#"><i>Lihat Selengkapnya</i> <i class="fa fa-chevron-circle-right"></i></a>
@@ -245,77 +218,65 @@
     <div class="row">
       <div class="col-lg-12 col-md-12 col-sm-12">
         <div class="row">
-          <div class="col-lg-6 col-md-6 col-sm-6">
-            <img src="img/banner-bg.jpg" width="100%" alt="" style="border-radius : 10px;">
-            <i class="fa fa-calendar"> 10 Agustus 2019</i>
-            <i class="fa fa-user"> Admin</i>
-            <div class="content">
-              <h3>Kurban wadah silaturahmi</h3>
-              <p>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam.
-              </p>
-              <a href="#">Lihat Selengkapnya <i class="fa fa-chevron-circle-right"></i> </a>
-            </div>
-          </div>
-          <div class="col-lg-6 col-md-6 col-sm-6">
-            <div class="row">
-              <div class="col-lg-4 col-md-4 col-sm-4">
-                <img src="img/banner-bg.jpg" width="100%" height="100px" alt="" style="border-radius : 10px;">
-              </div>
-              <div class="col-lg-8 col-md-8 col-sm-8">
-                <i class="fa fa-calendar"> 10 Agustus 2019</i>
-                <i class="fa fa-user"> Admin</i>
-                <div>
-                  <h5>Kurban wadah silaturahmi</h5>
-                  <p style="font-size : 10px;">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                    incididunt ut labore et.
-                    <br>
-                    <a href="#">Lihat Selengkapnya <i class="fa fa-chevron-circle-right"></i> </a>
-                  </p>
-                </div>
-              </div>
-            </div>
-            <!--  -->
-            <div class="row">
-              <div class="col-lg-4 col-md-4 col-sm-4">
-                <img src="img/banner-bg.jpg" width="100%" height="100px" alt="" style="border-radius : 10px;">
-              </div>
-              <div class="col-lg-8 col-md-8 col-sm-8">
-                <i class="fa fa-calendar"> 10 Agustus 2019</i>
-                <i class="fa fa-user"> Admin</i>
-                <div>
-                  <h5>Kurban wadah silaturahmi</h5>
-                  <p style="font-size : 10px;">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                    incididunt ut labore et.
-                    <br>
-                    <a href="#">Lihat Selengkapnya <i class="fa fa-chevron-circle-right"></i> </a>
-                  </p>
+          <div class="col-lg-6 col-md-6 col-sm-6">            
+            <?php
 
-                </div>
-              </div>
-            </div>
-            <!--  -->
-            <div class="row">
-              <div class="col-lg-4 col-md-4 col-sm-4">
-                <img src="img/banner-bg.jpg" width="100%" height="100px" alt="" style="border-radius : 10px;">
-              </div>
-              <div class="col-lg-8 col-md-8 col-sm-8">
-                <i class="fa fa-calendar"> 10 Agustus 2019</i>
-                <i class="fa fa-user"> Admin</i>
-                <div>
-                  <h5>Kurban wadah silaturahmi</h5>
-                  <p style="font-size : 10px;">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor
-                    incididunt ut labore et.
-                    <br>
-                    <a href="#">Lihat Selengkapnya <i class="fa fa-chevron-circle-right"></i> </a>
-                  </p>
-                </div>
-              </div>
-            </div>
+              $sql = mysqli_query($config, "SELECT * FROM tbl_berita INNER JOIN tbl_admin ON tbl_berita.id_admin = tbl_admin.id_admin ORDER BY tbl_berita.id_berita DESC LIMIT 1");
+              while($berita = mysqli_fetch_array($sql)){
+                
+                $long_string = $berita['deskripsi'];
+                $des = limit_words($long_string, 25);
+                ?>
+                  <img src="img/berita/<?=$berita['images_berita']?>" width="100%" alt="" style="border-radius : 10px;">
+                  <i class="fa fa-calendar"> <?=$berita['tanggal']?></i>
+                  <i class="fa fa-user"> <?=$berita['username']?></i>
+                  <div class="content">
+                    <h3><?=$berita['judul_berita']?></h3>
+                    <p>
+                      <?=$des?> ...
+                    </p>
+                    <a href="index.php?page=detail_berita&&id=<?=$berita['id_berita']?>">Lihat Selengkapnya <i class="fa fa-chevron-circle-right"></i> </a>
+                  </div>
+                <?php
+
+              }
+
+            ?>
+          </div>
+
+          <div class="col-lg-6 col-md-6 col-sm-6">
+            <?php
+
+              $sql = mysqli_query($config, "SELECT * FROM tbl_berita INNER JOIN tbl_admin ON tbl_berita.id_admin = tbl_admin.id_admin ORDER BY tbl_berita.id_berita DESC LIMIT 3");
+              while($berita = mysqli_fetch_array($sql)){
+                
+                $long_string = $berita['deskripsi'];
+                $des = limit_words($long_string, 10);
+                ?>
+
+                  <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-4">
+                      <img src="img/berita/<?=$berita['images_berita']?>" width="100%" height="100px" alt="" style="border-radius : 10px;">
+                    </div>
+                    <div class="col-lg-8 col-md-8 col-sm-8">
+                      <i class="fa fa-calendar"> <?=$berita['tanggal']?></i>
+                      <i class="fa fa-user"> <?=$berita['username']?></i>
+                      <div>
+                        <h5><?=$berita['judul_berita']?>i</h5>
+                        <p style="font-size : 12px;">
+                          <?=$des?> ...
+                          <br>
+                          <a href="index.php?page=detail_berita&&id=<?=$berita['id_berita']?>">Lihat Selengkapnya <i class="fa fa-chevron-circle-right"></i> </a>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                <?php
+
+              }
+
+            ?>            
 
           </div>
         </div>

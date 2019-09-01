@@ -21,14 +21,29 @@
             <div align="center" style="margin-bottom : 50px;">
               <h1>BERITA TERBARU <br> ALUMNI MUHI</h1>
             </div>
-            <img src="img/banner-bg.jpg" alt="" width="100%">
-            <i class="fa fa-calendar"> 10 Agustus 2019</i>
-            <i class="fa fa-user">Admin</i>
-            <h3>Kurban Wadah Silaturahmi</h3>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
-            <a href="index.php?page=detail_berita&id=7">Lihat Selengkapnya <i class="fa fa-chevron-circle-right"></i></a>
+
+            <?php
+
+              $sql = mysqli_query($config, "SELECT * FROM tbl_berita INNER JOIN tbl_admin ON tbl_berita.id_admin = tbl_admin.id_admin ORDER BY tbl_berita.id_berita DESC LIMIT 1");
+              while($berita = mysqli_fetch_array($sql))
+              {
+                $long_string = $berita['deskripsi'];
+                $des = limit_words($long_string, 40);
+                ?>
+                  <img src="img/berita/<?=$berita['images_berita']?>" alt="" width="100%">
+                  <i class="fa fa-calendar"> <?=$berita['tanggal']?></i>
+                  <i class="fa fa-user"> <?=$berita['username']?></i>
+                  <h3><?=$berita['judul_berita']?></h3>
+                  <p>
+                    <?=$des?> ...
+                  </p>
+                  <a href="index.php?page=detail_berita&id=<?=$berita['id_berita']?>">Lihat Selengkapnya <i class="fa fa-chevron-circle-right"></i></a>
+                <?php
+              }
+
+            ?>
+            
+
             <div class="">
               <div align="left" style="margin-top : 20px;">
                 <h3>Berita Alumni</h3>
@@ -36,66 +51,79 @@
               </div>
               <br><br>
               <div class="desc-wrap" align="left">
-                <div class="col-lg-12 col-md-12 col-sm-12">
-                  <div class="row">
-                    <div class="col-lg-4 col-md-4 col-sm-4">
-                      <img src="img/e2.jpg" width = "100%" alt="" >
-                    </div>
-                    <div class="col-lg-8 col-md-8 col-sm-8">
-                      <ul>
-                        <li>
-                          <a href="index.php?page=detail_lowongan&&id=1">
-                            <h4>PT. MAJU BERSAMA</h4>
-                          </a>
-                        </li>
-                        <li>
-                          <i class="fa fa-clock-o"> 10 Agustus 2019</i>
-                          <i class="fa fa-user"> Admin</i>
-                        </li>
-                        <li>
-                          <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,.
-                          </p>
-                          <a href="#">Lihat Selengkapnya <i class="fa fa-chevron-circle-right"></i></a>
-                        </li>
-                      </ul>
-                      <hr size="15px;" color="#FFFF00" width = "30%" align="left">
-                      <br>
-                    </div>
-                  </div>
-                </div>
 
-                <div class="col-lg-12 col-md-12 col-sm-12">
-                  <div class="row">
-                    <div class="col-lg-4 col-md-4 col-sm-4">
-                      <img src="img/m-img.jpg" width = "100%" alt="" >
+                <?php
+                //paging
+                $halaman = 2;
+                $page = isset($_GET["halaman"]) ? (int)$_GET["halaman"] : 1;
+                $mulai = ($page>1) ? ($page * $halaman) - $halaman : 0;
+                $result = mysqli_query($config,"SELECT * FROM tbl_berita");
+                $total = mysqli_num_rows($result);
+                $pages = ceil($total/$halaman);
+                $query = mysqli_query($config,"SELECT * FROM tbl_berita INNER JOIN tbl_admin ON tbl_berita.id_admin = tbl_admin.id_admin ORDER BY tbl_berita.id_berita DESC LIMIT $mulai, $halaman");
+                while ($row = mysqli_fetch_array ($query))
+                {
+                  $long_string = $row['deskripsi'];
+                  $des = limit_words($long_string, 10);
+                  ?>
+                    <div class="col-lg-12 col-md-12 col-sm-12">
+                      <div class="row">
+                        <div class="col-lg-4 col-md-4 col-sm-4">
+                          <img src="img/berita/<?=$row['images_berita']?>" width = "100%" alt="" >
+                        </div>
+                        <div class="col-lg-8 col-md-8 col-sm-8">
+                          <ul>
+                            <li>
+                              <a href="index.php?page=detail_lowongan&&id=1">
+                                <h4><?=$row['judul_berita']?></h4>
+                              </a>
+                            </li>
+                            <li>
+                              <i class="fa fa-clock-o"> <?=$row['tanggal']?></i>
+                              <i class="fa fa-user"> <?=$row['username']?></i>
+                            </li>
+                            <li>
+                              <p>
+                              <?=$des?> ...
+                              </p>
+                              <a href="index.php?page=detail_berita&id=<?=$row['id_berita']?>">Lihat Selengkapnya <i class="fa fa-chevron-circle-right"></i></a>
+                            </li>
+                          </ul>
+                          <hr size="15px;" color="#FFFF00" width = "30%" align="left">
+                          <br>
+                        </div>
+                      </div>
                     </div>
-                    <div class="col-lg-8 col-md-8 col-sm-8">
-                      <ul>
-                        <li>
-                          <a href="index.php?page=detail_lowongan&&id=1">
-                            <h4>PT. MAJU BERSAMA</h4>
-                          </a>
-                        </li>
-                        <li>
-                          <i class="fa fa-clock-o"> 10 Agustus 2019</i>
-                          <i class="fa fa-user"> Admin</i>
-                        </li>
-                        <li>
-                          <p>
-                            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,.
-                          </p>
-                          <a href="#">Lihat Selengkapnya <i class="fa fa-chevron-circle-right"></i></a>
-                        </li>
-                      </ul>
-                      <hr size="15px;" color="#FFFF00" width = "30%" align="left">
-                      <br>
-                    </div>
-                  </div>
-                </div>
 
+                  <?php
+                }
+                ?>
+
+                <div class="col-lg-12 col-md-12 col-sm-12" align="center">
+                <ul class="pagination">
+                    <li><a href="index.php?page=berita&&halaman=<?=$page-1?>"> &laquo; </a></li>
+                </ul>
+                <?php
+                for($start_number=1; $start_number<=$pages ; $start_number++)
+                {
+                    $active = false;
+                    if($page == $start_number){
+                        $active = "class='active'";
+                    }
+                    ?>
+                    <ul class="pagination">
+                        <li <?=$active?> ><a href="index.php?page=berita&&halaman=<?=$start_number?>"><?=$start_number?></a></li>
+                    </ul>
+                    <?php
+                }
+                ?>
+                <ul class="pagination">
+                    <li><a href="index.php?page=berita&&halaman=<?=$page+1?>"> &raquo; </a></li>
+                </ul>
+                </div>
+              
               </div>
-            </div>
+            </div>            
           </div>
 
           <div class="col-lg-4 col-md-4 col-sm-4 sidebar-widgets">
@@ -106,23 +134,27 @@
 
                   <?php
 
-                  $sql = mysqli_query($config,"SELECT * FROM tbl_lowongan_kerja ORDER BY tanggal DESC");
-                  while($loker = mysqli_fetch_array($sql)){
-
-                    ?>
-                      <div class="single-post-list d-flex flex-row align-items-center">
-                        <div class="">
-                          <img class="img-fluid" src="img/lowongan/<?=$loker['logo']?>" alt="" width="100px" style="border-radius : 5px;">
-                        </div>
-                        <div class="details">
-                          <a href="index.php?page=detail_lowongan&&id=<?=$loker['lowongan_id']?>"><h6><?=$loker['nama_perusahaan']?></h6></a>
-                          <i class="fa fa-clock-o"></i>
-                          <p><?=$loker['tanggal']?></p>
-                          <hr size="15px;" color="#FFFF00">
+                    $sql = mysqli_query($config,"SELECT * FROM tbl_lowongan_kerja ORDER BY tanggal DESC LIMIT 3");
+                    while($loker = mysqli_fetch_array($sql)){
+                      
+                      $long_string = $loker['deskripsi'];
+                      $des = limit_words($long_string, 5);
+                      ?>
+                      <div class="col-lg-12 col-md-12">
+                        <div class="row">
+                          <div class="col-lg-5 col-md-5">
+                            <img class="img-fluid" src="img/lowongan/<?=$loker['logo']?>" alt="" width="100px" style="border-radius : 5px;">
+                          </div>
+                          <div class="col-lg-7 col-md-7">
+                            <a href="index.php?page=detail_lowongan&&id=<?=$loker['lowongan_id']?>"><h6><?=$loker['nama_perusahaan']?></h6></a>
+                            <i class="fa fa-clock-o"> <?=$loker['tanggal']?></i>
+                            <p><?=$des?></p>
+                            <hr size="15px;" color="#FFFF00">
+                          </div>
                         </div>
                       </div>
-                    <?php
-                  }
+                      <?php
+                    }
                   ?>
 
                   <div class="" align ="right">
