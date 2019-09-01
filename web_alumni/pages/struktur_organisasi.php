@@ -90,7 +90,7 @@
                   ?>
 
                   <div class="" align ="right">
-                    <a href="#">Lihat Selengkapnya <i class="fa fa-chevron-circle-right"></i></a>
+                    <a href="index.php?page=lowongan_kerja">Lihat Selengkapnya <i class="fa fa-chevron-circle-right"></i></a>
                   </div>
                 </div>
               </div>
