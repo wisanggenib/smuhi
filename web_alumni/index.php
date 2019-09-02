@@ -5,6 +5,12 @@
 		$words = explode(" ",$string);
 		return implode(" ",array_splice($words,0,$word_limit));
 	}
+
+
+	$sql = "SELECT count(*) AS jumlah FROM tbl_alumni";
+	$query = mysqli_query($config,$sql);
+	$result = mysqli_fetch_array($query);
+
 ?>
 <!DOCTYPE html>
 <html lang="zxx" class="no-js">
@@ -38,6 +44,7 @@
 		<link rel="stylesheet" href="css/owl.carousel.css">
 		<link rel="stylesheet" href="css/jquery-ui.css">
 		<link rel="stylesheet" href="css/main.css">
+		<link rel="stylesheet" href="//cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css">
 		<style>
 			h1 , h2, h3, h4, h5{
 				font-family: sans-serif;
@@ -49,6 +56,11 @@
 
 			i {
 				font-family: sans-serif;
+			}
+
+			blockquote {
+				font-family: sans-serif;
+				font-size : 14px;
 			}
 		</style>
 	</head>
@@ -174,7 +186,7 @@
 						</div>
 
 						<br><br>
-						<h3 style="color : white; margin-top : 100px">5982 ALUMNI MUHI</h3>
+						<h3 style="color : white; margin-top : 100px"><?=$result['jumlah']?> ALUMNI MUHI</h3>
 						<hr size = "15px;" color= "#FFFF00" width = "50px"; align="left">
 						<p style="color : white;">Telah Mendaftar di forum alumni MUHI</p>
 						<div class="col-lg-10 col-md-10 col-sm-10" align="center">
@@ -215,7 +227,7 @@
 							</a>
 						</div>
 
-						<div class="col-lg-12 col-md-12 col-sm-12" align="center">
+						<div class="col-lg-12 col-md-12 col-sm-12" align="center" style="margin-top : 20px;">
 							<p style="color: white; font-size : 12px;">
 								Copyright &copy;<script>document.write(new Date().getFullYear());</script>
 								alumnimuhi.com | Bagus and team |
@@ -284,5 +296,11 @@
 		<script src="js/owl.carousel.min.js"></script>
 		<script src="js/mail-script.js"></script>
 		<script src="js/main.js"></script>
+		<script src="//cdn.datatables.net/1.10.19/js/jquery.dataTables.min.js"></script>
+		<script>
+			$(document).ready( function () {
+				$('#myTable').DataTable();
+			} );
+		</script>
 	</body>
 </html>

@@ -100,26 +100,26 @@
                 ?>
 
                 <div class="col-lg-12 col-md-12 col-sm-12" align="center">
-                <ul class="pagination">
-                    <li><a href="index.php?page=berita&&halaman=<?=$page-1?>"> &laquo; </a></li>
-                </ul>
-                <?php
-                for($start_number=1; $start_number<=$pages ; $start_number++)
-                {
-                    $active = false;
-                    if($page == $start_number){
-                        $active = "class='active'";
+                  <ul class="pagination">
+                      <li><a href="index.php?page=berita&&halaman=<?=$page-1?>"> &laquo; </a></li>
+                  </ul>
+                  <?php
+                    for($start_number=1; $start_number<=$pages ; $start_number++)
+                    {
+                        $active = false;
+                        if($page == $start_number){
+                            $active = "class='active'";
+                        }
+                        ?>
+                        <ul class="pagination">
+                            <li <?=$active?> ><a href="index.php?page=berita&&halaman=<?=$start_number?>"><?=$start_number?></a></li>
+                        </ul>
+                        <?php
                     }
-                    ?>
-                    <ul class="pagination">
-                        <li <?=$active?> ><a href="index.php?page=berita&&halaman=<?=$start_number?>"><?=$start_number?></a></li>
-                    </ul>
-                    <?php
-                }
-                ?>
-                <ul class="pagination">
-                    <li><a href="index.php?page=berita&&halaman=<?=$page+1?>"> &raquo; </a></li>
-                </ul>
+                  ?>
+                  <ul class="pagination">
+                      <li><a href="index.php?page=berita&&halaman=<?=$page+1?>"> &raquo; </a></li>
+                  </ul>
                 </div>
               
               </div>

@@ -364,11 +364,13 @@
     <div class="overlay overlay-bg"></div>
     <div class="row justify-content-center">
       <div class="wrap">
-        <h1 class="text-white">Become an instructor</h1>
+        
+        <h1 class="text-white"><?=$result['jumlah']?> Alumni</h1>
+        <p style="font-size : 24px;">SMA 1 Muhammadiyah Yogyakarta</p>
         <p>
-          There is a moment in the life of any aspiring astronomer that it is time to buy that first telescope. It’s exciting to think about setting up your own viewing station whether that is on the deck.
+              Kami Menunggumu bergabung dengan alumni SMA 1 Muhammadiyah Yogyakarta <br> Daftar Sekarang Juga !!
         </p>
-        <a class="primary-btn wh" href="#">Apply for the post</a>
+        <a class="primary-btn wh" href="#">Daftar Alumni</a>
       </div>
     </div>
   </div>

@@ -22,10 +22,10 @@
               <h1>DATA ALUMNI MUHI</h1>
             </div>
             <br><br>
-            <h3>Cari Berdasarkan :</h3>
+            <!-- <h3>Cari Berdasarkan :</h3> -->
             <hr size="15px;" color="#FFFF00" align="left" width="20%;">
             <div class="row" style="margin : 10px;">
-              <span>Masukkan Salah Satu atau Dapat Keduanya</span>
+              <!-- <span>Masukkan Salah Satu atau Dapat Keduanya</span>
               <div class="col-lg-12 col-md-12 col-sm-12">
                 <div class="row">
                   <div class="col-lg-3 col-md-3 col-sm-3">
@@ -39,46 +39,48 @@
                     </button>
                   </div>
                 </div>
-              </div>
+              </div> -->
               <br><br>
-              <table class="table table-hover">
-                <thead>
-                  <tr>
-                    <th width="10%">No.</th>
-                    <th width="50%">Nama Lengkap</th>
-                    <th width="30%">Tahun lulus</th>
-                    <th width="10%">#</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <!-- <tr>
-                    <td>1</td>
-                    <td>yiyin zulfi</td>
-                    <td>2017</td>
-                    <td>
-                      <a href="index.php?page=detail_alumni&&id=<?=23?>" class="btn btn-info btn-sm">Detail</a>
-                    </td>
-                  </tr> -->
+              <div class="col-lg-12 col-md-12 col-sm-12">
+                <table class="table table-hover" id="myTable">
+                  <thead>
+                    <tr>
+                      <th width="10%">No.</th>
+                      <th width="50%">Nama Lengkap</th>
+                      <th width="30%">Tahun lulus</th>
+                      <th width="10%">#</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <!-- <tr>
+                      <td>1</td>
+                      <td>yiyin zulfi</td>
+                      <td>2017</td>
+                      <td>
+                        <a href="index.php?page=detail_alumni&&id=<?=23?>" class="btn btn-info btn-sm">Detail</a>
+                      </td>
+                    </tr> -->
 
-                  <?php
-                    $no = 1;
-                    $sql = mysqli_query($config, "SELECT * FROM tbl_alumni ORDER BY tahun_lulus ASC LIMIT 10");
-                    while($data = mysqli_fetch_array($sql)){
-                      ?>
-                        <tr>
-                          <td><?=$no++?></td>
-                          <td><?=$data['nama_alumni']?></td>
-                          <td><?=$data['tahun_lulus']?></td>
-                          <td>
-                            <a href="index.php?page=detail_alumni&&id=<?=$data['id_alumni']?>" class="btn btn-info btn-sm">Detail</a>
-                          </td>
-                        </tr>
-                      <?php
-                    }
-                  ?>
+                    <?php
+                      $no = 1;
+                      $sql = mysqli_query($config, "SELECT * FROM tbl_alumni ORDER BY tahun_lulus ASC LIMIT 10");
+                      while($data = mysqli_fetch_array($sql)){
+                        ?>
+                          <tr>
+                            <td><?=$no++?></td>
+                            <td><?=$data['nama_alumni']?></td>
+                            <td><?=$data['tahun_lulus']?></td>
+                            <td>
+                              <a href="index.php?page=detail_alumni&&id=<?=$data['id_alumni']?>" class="btn btn-info">Detail</a>
+                            </td>
+                          </tr>
+                        <?php
+                      }
+                    ?>
 
-                </tbody>
-              </table>
+                  </tbody>
+                </table>
+              </div>
             </div>
 
           </div>

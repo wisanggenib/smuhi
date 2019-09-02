@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 01, 2019 at 02:26 PM
+-- Generation Time: Sep 02, 2019 at 05:02 AM
 -- Server version: 10.1.31-MariaDB
 -- PHP Version: 7.2.3
 
@@ -72,10 +72,21 @@ CREATE TABLE `tbl_alumni` (
   `images` text NOT NULL,
   `no_telp` varchar(13) NOT NULL,
   `email` text NOT NULL,
-  `alamat_rumah` varchar(100) NOT NULL,
-  `kantor` varchar(30) NOT NULL,
-  `alamat_kantor` varchar(100) NOT NULL
+  `alamat_rumah` varchar(100) DEFAULT NULL,
+  `kantor` varchar(30) DEFAULT NULL,
+  `alamat_kantor` varchar(100) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_alumni`
+--
+
+INSERT INTO `tbl_alumni` (`id_alumni`, `nama_alumni`, `tahun_lulus`, `images`, `no_telp`, `email`, `alamat_rumah`, `kantor`, `alamat_kantor`) VALUES
+(2, 'widya', 1999, 'tm-4.jpg', '081332769382', 'widya@gmail.com', 'jl super raya no. 22', NULL, NULL),
+(3, 'Cahyo Setyo Putro', 1994, '112.jpg', '02234699545', 'cahyo@gmail.com', 'yogyakarta', 'mundo', 'jl anggajaya'),
+(4, 'dina', 2000, 'tm-4.jpg', '02336548957', 'dina@gmail.com', 'jl lely 2 depok sleman', NULL, NULL),
+(5, 'Dwi Prasetyo', 1995, '112.jpg', '023356459653', 'dwi_prasetyo@gmail.com', 'condong catur depok sleman', NULL, NULL),
+(6, 'Susi wijayanti', 1996, 'tm-4.jpg', '02231233552', 'wijayanti99@gmail.com', 'yogyakarta', 'gits solution', 'jl padjajaran');
 
 -- --------------------------------------------------------
 
@@ -192,6 +203,16 @@ CREATE TABLE `tbl_pengurus` (
   `deskripsi` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `tbl_pengurus`
+--
+
+INSERT INTO `tbl_pengurus` (`id_pengurus`, `id_alumni`, `jabatan`, `angkatan`, `deskripsi`) VALUES
+(1, 3, 'Ketua', 1994, 'Bernama lengkap William Henry Gates III atau lebih dikenal dengan nama Bill Gates dilahirkan pada 28 Oktober 1955, di Seattle, Washington. Ia adalah adalah anak kedua dari tiga bersaudara.\r\n<br><br>\r\nAyahnya William Henry Gates adalah seorang pengacara perusahaan yang punya banyak relasi di kota. Sedangkan ibunya Mary Maxwell seorang pegawai First Interstate Bank, Pacific Northwest Bell dan anggota Tingkat Nasional United Way.\r\n<br><br>\r\nBill Gates seorang anak yang cerdas, tetapi dia terlalu penuh semangat dan cenderung sering mengalami kesulitan di sekolah. Ketika dia berumur sebelas tahun, orang tuanya memutuskan untuk membuat perubahan pada dirinya dan mengirimnya ke Lakeside School, sebuah sekolah dasar yang bergengsi khusus bagi anak laki-laki.\r\n<blockquote>\r\nDalam Biografi Bill Gates diketahui bahwa pada tahun 1990 Bill Gates mendapat tuntutan dari Departemen Keadilan Amerika Serikat dengan dakwaan Gates telah melakukan monopoli terhadap perusahaan-perusahaan kecil.\r\n</blockquote>'),
+(2, 5, 'ketua', 1995, 'Bernama lengkap William Henry Gates III atau lebih dikenal dengan nama Bill Gates dilahirkan pada 28 Oktober 1955, di Seattle, Washington. Ia adalah adalah anak kedua dari tiga bersaudara.\r\n<br><br>\r\nAyahnya William Henry Gates adalah seorang pengacara perusahaan yang punya banyak relasi di kota. Sedangkan ibunya Mary Maxwell seorang pegawai First Interstate Bank, Pacific Northwest Bell dan anggota Tingkat Nasional United Way.\r\n<br><br>\r\nBill Gates seorang anak yang cerdas, tetapi dia terlalu penuh semangat dan cenderung sering mengalami kesulitan di sekolah. Ketika dia berumur sebelas tahun, orang tuanya memutuskan untuk membuat perubahan pada dirinya dan mengirimnya ke Lakeside School, sebuah sekolah dasar yang bergengsi khusus bagi anak laki-laki.\r\n<blockquote>\r\nDalam Biografi Bill Gates diketahui bahwa pada tahun 1990 Bill Gates mendapat tuntutan dari Departemen Keadilan Amerika Serikat dengan dakwaan Gates telah melakukan monopoli terhadap perusahaan-perusahaan kecil.\r\n</blockquote>'),
+(3, 2, 'Ketua', 1999, 'Bernama lengkap William Henry Gates III atau lebih dikenal dengan nama Bill Gates dilahirkan pada 28 Oktober 1955, di Seattle, Washington. Ia adalah adalah anak kedua dari tiga bersaudara.\r\n<br><br>\r\nAyahnya William Henry Gates adalah seorang pengacara perusahaan yang punya banyak relasi di kota. Sedangkan ibunya Mary Maxwell seorang pegawai First Interstate Bank, Pacific Northwest Bell dan anggota Tingkat Nasional United Way.\r\n<br><br>\r\nBill Gates seorang anak yang cerdas, tetapi dia terlalu penuh semangat dan cenderung sering mengalami kesulitan di sekolah. Ketika dia berumur sebelas tahun, orang tuanya memutuskan untuk membuat perubahan pada dirinya dan mengirimnya ke Lakeside School, sebuah sekolah dasar yang bergengsi khusus bagi anak laki-laki.\r\n<blockquote>\r\nDalam Biografi Bill Gates diketahui bahwa pada tahun 1990 Bill Gates mendapat tuntutan dari Departemen Keadilan Amerika Serikat dengan dakwaan Gates telah melakukan monopoli terhadap perusahaan-perusahaan kecil.\r\n</blockquote>'),
+(4, 6, 'Ketua', 1996, 'Bernama lengkap William Henry Gates III atau lebih dikenal dengan nama Bill Gates dilahirkan pada 28 Oktober 1955, di Seattle, Washington. Ia adalah adalah anak kedua dari tiga bersaudara.\r\n<br><br>\r\nAyahnya William Henry Gates adalah seorang pengacara perusahaan yang punya banyak relasi di kota. Sedangkan ibunya Mary Maxwell seorang pegawai First Interstate Bank, Pacific Northwest Bell dan anggota Tingkat Nasional United Way.\r\n<br><br>\r\nBill Gates seorang anak yang cerdas, tetapi dia terlalu penuh semangat dan cenderung sering mengalami kesulitan di sekolah. Ketika dia berumur sebelas tahun, orang tuanya memutuskan untuk membuat perubahan pada dirinya dan mengirimnya ke Lakeside School, sebuah sekolah dasar yang bergengsi khusus bagi anak laki-laki.\r\n<blockquote>\r\nDalam Biografi Bill Gates diketahui bahwa pada tahun 1990 Bill Gates mendapat tuntutan dari Departemen Keadilan Amerika Serikat dengan dakwaan Gates telah melakukan monopoli terhadap perusahaan-perusahaan kecil.\r\n</blockquote>');
+
 -- --------------------------------------------------------
 
 --
@@ -204,6 +225,15 @@ CREATE TABLE `tbl_riwayat_alumni` (
   `pendidikan` text NOT NULL,
   `pendidikan_lulus` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_riwayat_alumni`
+--
+
+INSERT INTO `tbl_riwayat_alumni` (`id_riwayat`, `id_alumni`, `pendidikan`, `pendidikan_lulus`) VALUES
+(1, 3, 'SDN Ngelang 2', 1989),
+(2, 3, 'SMP N 1 Barat', 1991),
+(3, 3, 'SMA Muhammadiyah Yogyakarta', 1994);
 
 --
 -- Indexes for dumped tables
@@ -294,7 +324,7 @@ ALTER TABLE `tbl_agenda_alumni`
 -- AUTO_INCREMENT for table `tbl_alumni`
 --
 ALTER TABLE `tbl_alumni`
-  MODIFY `id_alumni` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_alumni` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `tbl_berita`
@@ -330,13 +360,13 @@ ALTER TABLE `tbl_medos_alumni`
 -- AUTO_INCREMENT for table `tbl_pengurus`
 --
 ALTER TABLE `tbl_pengurus`
-  MODIFY `id_pengurus` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_pengurus` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `tbl_riwayat_alumni`
 --
 ALTER TABLE `tbl_riwayat_alumni`
-  MODIFY `id_riwayat` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_riwayat` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- Constraints for dumped tables

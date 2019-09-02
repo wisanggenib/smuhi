@@ -21,28 +21,25 @@
             <div align="left">
               <h1>PROFIL KETUA ALUMNI MUHI</h1>
             </div>
-            <div>
-              <img src="img/112.jpg" width="200px;" alt="" style="float: left; margin : 15px;">
-              <br><br>
-              <h2>Bpk. Anto Nio</h2>
-              <p>Alumni Angkatan 1990</p>
-              <br>
-              <p style="font-size : 12px;" align="justify">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                <br><br>
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-              </p>
-              <blockquote cite="http://" class="generic-blockquote">
-                <p style="font-size : 12px;" align="justify">
-                  "
-                  Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in .
-                  "
-                </p>
-              </blockquote>
-              <p style="font-size : 12px;" align="justify">
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-              </p>
-            </div>
+            <?php
+
+              $sql = mysqli_query($config, "SELECT * FROM tbl_pengurus INNER JOIN tbl_alumni ON tbl_pengurus.id_alumni = tbl_alumni.id_alumni WHERE tbl_pengurus.jabatan = 'Ketua' AND tbl_pengurus.angkatan = '1994'");
+              while($data = mysqli_fetch_array($sql)){
+                ?>
+                <div>
+                  <img src="img/alumni/<?=$data['images']?>" width="200px;" alt="" style="float: left; margin : 15px;">
+                  <br><br>
+                  <h2><?=$data['nama_alumni']?></h2>
+                  <p>Alumni Angkatan <?=$data['tahun_lulus']?></p>
+                  <br>
+                  <p style="font-size : 12px;" align="justify">
+                    <?=$data['deskripsi']?>
+                  </p>
+                </div>
+                <?php
+              }
+              ?>
+            
           </div>
 
           <div class="col-lg-4 col-md-4 col-sm-4 sidebar-widgets">
