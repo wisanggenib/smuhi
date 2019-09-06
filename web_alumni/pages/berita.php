@@ -57,8 +57,8 @@
                 $halaman = 2;
                 $page = isset($_GET["halaman"]) ? (int)$_GET["halaman"] : 1;
                 $mulai = ($page>1) ? ($page * $halaman) - $halaman : 0;
-                $result = mysqli_query($config,"SELECT * FROM tbl_berita");
-                $total = mysqli_num_rows($result);
+                $result1 = mysqli_query($config,"SELECT * FROM tbl_berita");
+                $total = mysqli_num_rows($result1);
                 $pages = ceil($total/$halaman);
                 $query = mysqli_query($config,"SELECT * FROM tbl_berita INNER JOIN tbl_admin ON tbl_berita.id_admin = tbl_admin.id_admin ORDER BY tbl_berita.id_berita DESC LIMIT $mulai, $halaman");
                 while ($row = mysqli_fetch_array ($query))

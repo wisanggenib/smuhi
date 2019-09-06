@@ -48,97 +48,87 @@
               <h4>Komentar :</h4>
               <hr size="15px" color="#2a43aa" width="15%" align="left">
               <div class="form-comentar" style="margin : 10px;">
-                <div class="col-lg-12 col-md-12 col-sm-12" style="margin-top : 15px;">
-                    <div class="row">
-                      <div class="col-lg-4 col-md-4">
-                        <input type="text" name="" value="" placeholder="Nama" class="form-control">
+                <form action="index.php?page=kirim_komentar" method="post">
+                  <div class="col-lg-12 col-md-12 col-sm-12" style="margin-top : 15px;">
+                      <div class="row">
+                        <input type="hidden" name="id" value="<?=$_GET['id']?>">
+                        <div class="col-lg-4 col-md-4">
+                          <input type="text" name="nama" value="" placeholder="Nama" class="form-control">
+                        </div>
+                        <div class="col-lg-6 col-md-6">
+                          <input type="email" name="email" value="" placeholder="Email" class="form-control">
+                        </div>
+                        <div class="col-lg-2 col-md-2">
+                          <button type="submit" name="kirim_komentar" style="width : 100%;" class="btn btn-primary"><i class="fa fa-send"></i> KIRIM</button>
+                        </div>
                       </div>
-                      <div class="col-lg-6 col-md-6">
-                        <input type="email" name="" value="" placeholder="Email" class="form-control">
-                      </div>
-                      <div class="col-lg-2 col-md-2">
-                        <button type="button" name="kirim_komentar" style="width : 100%;" class="btn btn-primary"><i class="fa fa-send"></i> KIRIM</button>
-                      </div>
-                    </div>
-                </div>
-                <div class="col-lg-12 col-md-12 col-sm-12" style="margin-top : 15px;">
-                  <textarea name="name" rows="8" cols="80" class="form-control">isi Komentar</textarea>
-                </div>
+                  </div>
+                  <div class="col-lg-12 col-md-12 col-sm-12" style="margin-top : 15px;">
+                    <textarea name="isi_komentar" rows="8" cols="80" class="form-control">isi Komentar</textarea>
+                  </div>
+                </form>
 
                 <div class="col-lg-12 col-md-12">
-
                   <div class="comments-area">
-                    <div class="comment-list">
-                        <div class="single-comment justify-content-between d-flex">
-                            <div class="user justify-content-between d-flex">
-                                <div class="thumb">
-                                    <img src="img/blog/c1.jpg" alt="">
-                                </div>
-                                <div class="desc">
-                                    <h5><a href="#">Emilly Blunt</a></h5>
-                                    <p class="date">December 4, 2017 at 3:12 pm </p>
-                                    <p class="comment">
-                                        Never say goodbye till the end comes!
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="comment-list left-padding">
-                        <div class="single-comment justify-content-between d-flex">
-                            <div class="user justify-content-between d-flex">
-                                <div class="thumb">
-                                    <img src="img/blog/c2.jpg" alt="">
-                                </div>
-                                <div class="desc">
-                                    <h5><a href="#">Elsie Cunningham</a></h5>
-                                    <p class="date">December 4, 2017 at 3:12 pm </p>
-                                    <p class="comment">
-                                        Never say goodbye till the end comes!
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                  <?php
+                    $id = $_GET['id'];
+                    $sql = mysqli_query($config,"SELECT * FROM tbl_komentar WHERE id_berita = $id AND parent_komentar IS NULL ORDER BY tanggal DESC");
+                    while($data = mysqli_fetch_array($sql)){
 
-                    <!--  -->
-
-                    <div class="comment-list">
-                        <div class="single-comment justify-content-between d-flex">
-                            <div class="user justify-content-between d-flex">
-                                <div class="thumb">
-                                    <img src="img/blog/c1.jpg" alt="">
-                                </div>
-                                <div class="desc">
-                                    <h5><a href="#">Emilly Blunt</a></h5>
-                                    <p class="date">December 4, 2017 at 3:12 pm </p>
-                                    <p class="comment">
-                                        Never say goodbye till the end comes!
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="comment-list left-padding">
-                        <div class="single-comment justify-content-between d-flex">
-                            <div class="user justify-content-between d-flex">
-                                <div class="thumb">
-                                    <img src="img/blog/c2.jpg" alt="">
-                                </div>
-                                <div class="desc">
-                                    <h5><a href="#">Elsie Cunningham</a></h5>
-                                    <p class="date">December 4, 2017 at 3:12 pm </p>
-                                    <p class="comment">
-                                        Never say goodbye till the end comes!
-                                    </p>
+                      ?>
+                      
+                        <div class="comment-list">
+                            <div class="single-comment justify-content-between d-flex">
+                                <div class="user justify-content-between d-flex">
+                                    <div class="thumb">
+                                        <img src="img/admin/usr.png" alt="" width="50px;">
+                                    </div>
+                                    <div class="desc">
+                                        <h5><a href="mailto:<?=$data['email']?>"><?=$data['nama']?></a></h5>
+                                        <p class="date"><?=$data['tanggal']?></p>
+                                        <p class="comment">
+                                            <?=$data['isi']?>
+                                        </p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
 
-                    <div class="" align="center">
+                        <?php
+
+                          $id_parent = $data['id_komentar'];
+                          $replay = mysqli_query($config,"SELECT * FROM tbl_komentar WHERE parent_komentar = $id_parent ");
+                          while($parent = mysqli_fetch_array($replay)){
+
+                          ?>
+
+                              <div class="comment-list left-padding">
+                                  <div class="single-comment justify-content-between d-flex">
+                                      <div class="user justify-content-between d-flex">
+                                          <div class="thumb">
+                                              <img src="img/admin/admin-male.png" alt="" width="50px;">
+                                          </div>
+                                          <div class="desc">
+                                              <h5><a href="mailto:<?=$parent['email']?>"><?=$parent['nama']?></a></h5>
+                                              <p class="date"><?=$parent['tanggal']?></p>
+                                              <p class="comment">
+                                                  <?=$parent['isi']?>
+                                              </p>
+                                          </div>
+                                      </div>
+                                  </div>
+                              </div>
+
+                          <?php
+                          }
+                        
+                    }
+                  ?>
+                  
+
+                    <!-- <div class="" align="center">
                       <button type="button" name="button" class="btn btn-info">Lihat 20 komentar Lainnya</button>
-                    </div>
+                    </div> -->
 
                   </div>
 

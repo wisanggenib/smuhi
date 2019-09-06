@@ -25,8 +25,13 @@
             <div class="desc-wrap" align="left">
 
               <?php
-
-                $sql = mysqli_query($config,"SELECT * FROM tbl_lowongan_kerja ORDER BY tanggal DESC");
+                $halaman = 4;
+                $page = isset($_GET["halaman"]) ? (int)$_GET["halaman"] : 1;
+                $mulai = ($page>1) ? ($page * $halaman) - $halaman : 0;
+                $result1 = mysqli_query($config,"SELECT * FROM tbl_lowongan_kerja");
+                $total = mysqli_num_rows($result1);
+                $pages = ceil($total/$halaman);
+                $sql = mysqli_query($config,"SELECT * FROM tbl_lowongan_kerja ORDER BY tanggal DESC LIMIT $mulai, $halaman");
                 
                 while($loker = mysqli_fetch_array($sql)){
 
@@ -66,6 +71,29 @@
 
                 }
               ?>
+
+                <div class="col-lg-12 col-md-12 col-sm-12" align="center">
+                  <ul class="pagination">
+                      <li><a href="index.php?page=lowongan_kerja&&halaman=<?=$page-1?>"> &laquo; </a></li>
+                  </ul>
+                  <?php
+                    for($start_number=1; $start_number<=$pages ; $start_number++)
+                    {
+                        $active = false;
+                        if($page == $start_number){
+                            $active = "class='active'";
+                        }
+                        ?>
+                        <ul class="pagination">
+                            <li <?=$active?> ><a href="index.php?page=lowongan_kerja&&halaman=<?=$start_number?>"><?=$start_number?></a></li>
+                        </ul>
+                        <?php
+                    }
+                  ?>
+                  <ul class="pagination">
+                      <li><a href="index.php?page=lowongan_kerja&&halaman=<?=$page+1?>"> &raquo; </a></li>
+                  </ul>
+                </div>
 
             </div>
 
