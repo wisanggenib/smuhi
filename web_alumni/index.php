@@ -114,7 +114,7 @@
 					</ul>
 					</li>
 					<li><a href="index.php?page=kartu_alumni">Kartu Alumni</a></li>
-					<li><a href="index.php?page=">Forum</a></li>
+					<li><a href="forum/index.php">Forum</a></li>
 				</ul>
 				</nav><!-- #nav-menu-container -->
 			</div>

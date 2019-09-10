@@ -52,6 +52,9 @@
                   include "pages/kirim_komentar.php";
             break;
 
+            // case 'forum' :
+            //       include "forum/index.php";
+            // break;
 
 
             default :
