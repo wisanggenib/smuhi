@@ -1,6 +1,11 @@
 <?php
     include "../config.php";
 
+    function limit_words($string, $word_limit){
+		$words = explode(" ",$string);
+		return implode(" ",array_splice($words,0,$word_limit));
+	}
+
     $sql = "SELECT count(*) AS jumlah FROM tbl_alumni";
 	$query = mysqli_query($config,$sql);
 	$result = mysqli_fetch_array($query);
@@ -22,7 +27,7 @@
 	<!-- meta character set -->
 	<meta charset="UTF-8">
 	<!-- Site Title -->
-	<title>Alumni | MUHI</title>
+	<title>FORUM | MUHI</title>
 
 	<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,400,300,500,600,700" rel="stylesheet">
 		<!--
@@ -67,26 +72,37 @@
 		<div class="header-top">
 			<div class="container">
 				<div class="row">
-					<div class="col-lg-8 col-sm-8 col-8 header-top-left no-padding">
-
-				<a href="mailto:info@smamuhi-yog.sch.id"><i class="fa fa-envelope"></i> <span class="">info@smamuhi-yog.sch.id</span></a>
-				<a href="tel:+953 012 3654 896"><i class="fa fa-phone"></i> <span class="">+62-274-563739</span></a>
-
+					<div class="col-lg-2 col-sm-2 col-sm-2 header-top-left no-padding" style="margin-top: 5px; ">
+                        <h3 style="color: white;">FORUM MUHI</h3>
 					</div>
-					<div class="col-lg-4 col-sm-4 col-4">
-							<div class="col-lg-3 col-md-3 col-sm-3" align="right">
-								<a href="" class="pull-right">ID</a>
-							</div>
-							<div class="col-lg-9 col-md-9 col-sm-9">
-								<form>
-					<div class="input-group" >
-					<!-- <a href="#">ID</a> -->
-					<span class="input-group-addon"><i class="fa fa-search" style=""></i></span>
-					<input id="pencarian" type="text" class="form-control" name="pencarian" placeholder="pencarian">
-					</div>
-				</form>
-							</div>
-					</div>
+					<div class="col-lg-3 col-sm-3 col-sm-3">
+                        <div class="col-lg-3 col-md-3 col-sm-3" align="right" style="margin-top: 5px; ">
+                            <p style="color : white;">ID</p>
+                        </div>
+                        <div class="col-lg-9 col-md-9 col-sm-9">
+                            <form>
+                                <div class="input-group" >
+                                <!-- <a href="#">ID</a> -->
+                                <span class="input-group-addon"><i class="fa fa-search" style=""></i></span>
+                                <input id="pencarian" type="text" class="form-control" name="pencarian" placeholder="pencarian">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-3 col-sm-3">
+                        <div class="col-lg-8 col-md-8" style="margin-top : 5px;">
+                            <p style="color: white;"><a href="a">MASUK</a> | <a href="b">DAFTAR</a> </p>
+                        </div>
+                        <div class="col-lg-4 col-md-4">
+                            <a href="" class="btn btn-success">Buat Artikel</a>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4" >
+                        <div class="input-group" style="margin-left : 15px;">
+                            <span class="input-group-addon"><i class="fa fa-search" style=""></i></span>
+                            <input id="pencarian" type="text" class="form-control" name="pencarian" placeholder="Buat Rekaman">
+                        </div>
+                    </div>
 				</div>
 			</div>
 		</div>
@@ -114,21 +130,15 @@
                         </ul>
 					</li>
 					<li><a href="index.php?page=beranda">Beranda</a></li>
-                    <li class="menu-has-children"><a href="">Tentang Kami</a>
-                        <ul>
-                            <li><a href="index.php?page=profil_ketua">Profile Ketua Alumni MUHI</a></li>
-                            <li><a href="index.php?page=struktur_organisasi">Struktur Organisasi Alumni MUHI</a></li>
-                            <li><a href="index.php?page=direktori">Direktori Pengurus Alumni MUHI</a></li>
-                        </ul>
-					</li>
-					<li><a href="index.php?page=data_alumni">Data Alumni</a></li>
-                    <li class="menu-has-children"><a href="">Karier</a>
-                        <ul>
-                            <li><a href="index.php?page=lowongan_kerja">Lowongan Kerja</a></li>
-                        </ul>
-					</li>
-					<li><a href="index.php?page=kartu_alumni">Kartu Alumni</a></li>
-					<li><a href="forum/index.php">Forum</a></li>
+					<li><a href="index.php?page=data_alumni">Hobby</a></li>
+					<li><a href="index.php?page=kartu_alumni">Politik</a></li>
+                    <li><a href="forum/index.php">Travel</a></li>
+                    <li><a href="">Food</a></li>
+                    <li><a href="">Sosial</a></li>
+                    <li><a href="">Budaya</a></li>
+                    <li><a href="">Agama</a></li>
+                    <li><a href="">Ekonomi</a></li>
+                    <li><a href="">Donasi</a></li>
 				</ul>
 				</nav><!-- #nav-menu-container -->
 			</div>
