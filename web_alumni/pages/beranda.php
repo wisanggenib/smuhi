@@ -120,7 +120,7 @@
             
 
             <div class="" align ="right">
-              <a href="#"><i>Lihat Selengkapnya</i> <i class="fa fa-chevron-circle-right"></i></a>
+              <a href="index.php?page=penawaran_jasa"><i>Lihat Selengkapnya</i> <i class="fa fa-chevron-circle-right"></i></a>
             </div>
           </div>
         </div>

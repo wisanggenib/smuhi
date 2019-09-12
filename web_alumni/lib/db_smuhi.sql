@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 02, 2019 at 05:02 AM
+-- Generation Time: Sep 12, 2019 at 11:12 AM
 -- Server version: 10.1.31-MariaDB
 -- PHP Version: 7.2.3
 
@@ -131,8 +131,38 @@ CREATE TABLE `tbl_jasa` (
 --
 
 INSERT INTO `tbl_jasa` (`id_jasa`, `nama_perusahaan`, `tanggal`, `deskripsi`, `logo`) VALUES
-(1, 'Message', '2019-08-23', 'Untuk memenuhi kebutuhan tenaga kerja sebagai karyawan dan karyawati diperusahaan kami yang bergerak dalam bidang distribusi dan retail Membuka lowongan kerja untuk memenuhi kebutuhan tersebut untuk ditempatkan posisi sebagai berikut', 'b1.jpg'),
-(2, 'Cleaning', '2019-08-28', 'Menjadi Perusahaan Jasa Pembayaran Terlengkap, Terpercaya dan Inovatif, dan Misi : Menyediakan Pelayanan Pembayaran Online yang Praktis, Profesional, Tangguh, Mudah dan Aman serta menguntungkan bagi Mitra Jaringan Penjualan dan Seluruh Lapisan Masyarakat ', 'b3.jpg');
+(1, 'Message', '2019-08-23', 'Untuk memenuhi kebutuhan tenaga kerja sebagai karyawan dan karyawati diperusahaan kami yang bergerak dalam bidang distribusi dan retail Membuka lowongan kerja untuk memenuhi kebutuhan tersebut untuk ditempatkan posisi sebagai berikut\r\n<br><br>\r\nUntuk memenuhi kebutuhan tenaga kerja sebagai karyawan dan karyawati diperusahaan kami yang bergerak dalam bidang distribusi dan retail Membuka lowongan kerja untuk memenuhi kebutuhan tersebut untuk ditempatkan posisi sebagai berikut', 'b1.jpg'),
+(2, 'Cleaning', '2019-08-28', 'Menjadi Perusahaan Jasa Pembayaran Terlengkap, Terpercaya dan Inovatif, dan Misi : Menyediakan Pelayanan Pembayaran Online yang Praktis, Profesional, Tangguh, Mudah dan Aman serta menguntungkan bagi Mitra Jaringan Penjualan dan Seluruh Lapisan Masyarakat \r\n<br><br>\r\nMenjadi Perusahaan Jasa Pembayaran Terlengkap, Terpercaya dan Inovatif, dan Misi : Menyediakan Pelayanan Pembayaran Online yang Praktis, Profesional, Tangguh, Mudah dan Aman serta menguntungkan bagi Mitra Jaringan Penjualan dan Seluruh Lapisan Masyarakat ', 'b3.jpg');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_kategori`
+--
+
+CREATE TABLE `tbl_kategori` (
+  `id_kategori` int(11) NOT NULL,
+  `nama_kategori` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_kategori`
+--
+
+INSERT INTO `tbl_kategori` (`id_kategori`, `nama_kategori`) VALUES
+(1, 'Hobby'),
+(2, 'Politik'),
+(3, 'Travel'),
+(4, 'Foods'),
+(5, 'Sosial'),
+(6, 'Budaya'),
+(7, 'Agama'),
+(8, 'Ekonomi'),
+(9, 'Pendidikan'),
+(10, 'Bisnis'),
+(11, 'Sport'),
+(12, 'Jasa'),
+(13, 'Jual Beli');
 
 -- --------------------------------------------------------
 
@@ -149,6 +179,16 @@ CREATE TABLE `tbl_komentar` (
   `isi` text NOT NULL,
   `tanggal` date NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_komentar`
+--
+
+INSERT INTO `tbl_komentar` (`id_komentar`, `id_berita`, `parent_komentar`, `nama`, `email`, `isi`, `tanggal`) VALUES
+(1, 3, NULL, 'maruf', 'azizmuzani@gmail.com', 'halloo', '2019-09-06'),
+(2, 3, NULL, 'muzani', 'azizmuzani@gmail.com', 'isi Komentar', '2019-09-06'),
+(3, 3, NULL, 'muzani', 'azizmuzani@gmail.com', 'isi Komentar halo', '2019-09-06'),
+(7, 3, 1, 'admin', 'admin@gmail.com', 'oke', '2019-09-06');
 
 -- --------------------------------------------------------
 
@@ -235,6 +275,27 @@ INSERT INTO `tbl_riwayat_alumni` (`id_riwayat`, `id_alumni`, `pendidikan`, `pend
 (2, 3, 'SMP N 1 Barat', 1991),
 (3, 3, 'SMA Muhammadiyah Yogyakarta', 1994);
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_video`
+--
+
+CREATE TABLE `tbl_video` (
+  `id_video` int(11) NOT NULL,
+  `judul` varchar(50) NOT NULL,
+  `tanggal` date NOT NULL,
+  `url_video` text NOT NULL,
+  `deskripsi_video` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_video`
+--
+
+INSERT INTO `tbl_video` (`id_video`, `judul`, `tanggal`, `url_video`, `deskripsi_video`) VALUES
+(1, 'Sambutan Kepala Sekolah', '2019-09-11', 'video11121.MP4', 'Sangat Membanggakan Dapat bebagi ilmu dan menacari ilmu di sekolah ini. Banyak Pengalaman yang bisa saya ambil selama bersekolah disini<br><br><br>\r\nBpk. Anto Nio');
+
 --
 -- Indexes for dumped tables
 --
@@ -271,6 +332,12 @@ ALTER TABLE `tbl_jasa`
   ADD PRIMARY KEY (`id_jasa`);
 
 --
+-- Indexes for table `tbl_kategori`
+--
+ALTER TABLE `tbl_kategori`
+  ADD PRIMARY KEY (`id_kategori`);
+
+--
 -- Indexes for table `tbl_komentar`
 --
 ALTER TABLE `tbl_komentar`
@@ -303,6 +370,12 @@ ALTER TABLE `tbl_pengurus`
 ALTER TABLE `tbl_riwayat_alumni`
   ADD PRIMARY KEY (`id_riwayat`),
   ADD KEY `id_alumni` (`id_alumni`);
+
+--
+-- Indexes for table `tbl_video`
+--
+ALTER TABLE `tbl_video`
+  ADD PRIMARY KEY (`id_video`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -339,10 +412,16 @@ ALTER TABLE `tbl_jasa`
   MODIFY `id_jasa` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
+-- AUTO_INCREMENT for table `tbl_kategori`
+--
+ALTER TABLE `tbl_kategori`
+  MODIFY `id_kategori` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+
+--
 -- AUTO_INCREMENT for table `tbl_komentar`
 --
 ALTER TABLE `tbl_komentar`
-  MODIFY `id_komentar` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_komentar` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `tbl_lowongan_kerja`
@@ -367,6 +446,12 @@ ALTER TABLE `tbl_pengurus`
 --
 ALTER TABLE `tbl_riwayat_alumni`
   MODIFY `id_riwayat` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT for table `tbl_video`
+--
+ALTER TABLE `tbl_video`
+  MODIFY `id_video` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- Constraints for dumped tables

@@ -52,6 +52,14 @@
                   include "pages/kirim_komentar.php";
             break;
 
+            case 'penawaran_jasa' :
+                  include "pages/penawaran_jasa.php";
+            break;
+
+            case 'detail_jasa' :
+                  include "pages/detail_jasa.php";
+            break;
+
             // case 'forum' :
             //       include "forum/index.php";
             // break;
