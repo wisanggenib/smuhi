@@ -288,40 +288,68 @@
 
 
 <!-- Start search-course Area -->
-<section class="search-course-area relative">
+<section class="search-course-area relative" style="height : 500px;">
   <div class="overlay overlay-bg"></div>
   <div class="container">
     <div class="row justify-content-between align-items-center">
-      <div class="col-lg-6 col-md-6 search-course-left">
-        <h1 class="text-white">
-          SAMBUTAN </h1>
-          <br>
-          during this Summer!
-        </h1>
-        <div class="row details-content">
-          <video width="600px;" height="400px;">
-            <source src="https://www.youtube.com/watch?v=7bCPpVP9otM&list=RDsMifYbhLxlE&index=19" type="video/mp4">
-          </video>
-        </div>
-      </div>
-      <div class="col-lg-4 col-md-6 search-course-right section-gap">
-        <form class="form-wrap" action="#">
-          <h4 class="text-white pb-20 text-center mb-30">Search for Available Course</h4>
-          <input type="text" class="form-control" name="name" placeholder="Your Name" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Name'" >
-          <input type="phone" class="form-control" name="phone" placeholder="Your Phone Number" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Phone Number'" >
-          <input type="email" class="form-control" name="email" placeholder="Your Email Address" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Your Email Address'" >
-          <div class="form-select" id="service-select">
-            <select>
-              <option datd-display="">Choose Course</option>
-              <option value="1">Course One</option>
-              <option value="2">Course Two</option>
-              <option value="3">Course Three</option>
-              <option value="4">Course Four</option>
-            </select>
-          </div>
-          <button class="primary-btn text-uppercase">Submit</button>
-        </form>
-      </div>
+      <?php
+        $sql = mysqli_query($config,"SELECT * FROM tbl_video ORDER BY tanggal DESC LIMIT 1");
+        while($data = mysqli_fetch_array($sql)){
+          ?>
+            <div class="col-lg-6 col-md-6 search-course-left" style="margin-top : 20px;">
+              <h1 class="text-white">
+                SAMBUTAN </h1>
+                <hr size="15px" color= "#FFFF00" width = "70px"; align="left">
+                <h4 class="text-white" style="margin-bottom : 10px;"><?=$data['judul']?></h4>
+              </h1>
+              <!-- <div class="row details-content"> -->
+                <video width="560px;" height="auto" poster="img/video/video-icon.png" controls>
+                  <source src="img/video/<?=$data['url_video']?>" type="video/MP4">
+                </video>
+                <!-- <iframe width="560" height="400" src="https://www.youtube.com/embed/H7WVeQmbv7M" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> -->
+                  <div class="row">
+                    <div class="col-lg-4 col-md-4 col-sm-4">
+                      <hr size = "15px" color= "white" width = "70px"; align="right">
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4">
+                      <hr size = "15px" color= "#FFFF00" width = "70px"; align="center">
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4">
+                      <hr size = "15px" color= "white" width = "70px"; align="left">
+                    </div>
+                  </div> 
+              <!-- </div> -->
+            </div>
+            <div class="col-lg-5 col-md-6 ">
+              <div class="row" >
+                <div class="col-lg-4 col-md-4 col-sm-4">
+                  <hr size = "15px" color= "white" width = "70px"; align="right">
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4">
+                  <hr size = "15px" color= "#FFFF00" width = "70px"; align="center">
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-4">
+                  <hr size = "15px" color= "white" width = "70px"; align="left">
+                </div>
+              </div> 
+              <div class="row" style="margin-top : 80px;">
+                  <div class="col-lg-4 col-md-4">  
+                    <img src="img/tm-4.jpg" alt="" width="100px;" style="border-radius : 5px;">
+                  </div>
+                  <div class="col-lg-8 col-md-8">
+                    <h5 class="text-white">
+                      <?=$data['deskripsi_video']?>
+                    </h5>
+                  </div>
+              </div>
+              <div class="row"  style="margin-top: 100px;">
+                <h1 class="text-white">Kata Alumni</h1>
+                <h3 class="text-white">SMA 1 Muhammadiyah Yogyakarta</h3> 
+              </div>      
+            </div>
+          <?php
+        }
+        ?>
     </div>
   </div>
 </section>
