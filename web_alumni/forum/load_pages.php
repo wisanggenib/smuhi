@@ -12,6 +12,14 @@
                   include "pages/artikel.php";
             break;
 
+            case 'produk' : //halaman produk
+                  include "pages/produk.php";
+            break;
+
+            case 'detail_produk' : 
+                  include "pages/detail_produk.php";
+            break;
+
 
             default :
                   include "pages/beranda.php";

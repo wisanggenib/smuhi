@@ -207,6 +207,76 @@
                     </div>
                 </div>
 
+                <div class="row" style="margin-top : 20px;">
+                    <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10" style ="margin-bottom : 20px;">
+                        <img src="../img/112.jpg" alt="" width="50px" height = "50px" style="border-radius : 100%; float: left; margin-right : 10px;">
+                        <div style="">
+                            <div>
+                                <h3 style="float:left; ">Mark Allen</h3>
+                                <i style="margin-left : 5px; position : relative; top : 5px;">10 Agustus 2019 | 10:45</i>
+                            </div>
+                            <br>
+                            <div style="position : relative ; top: -15px;">
+                                <span>Spotlight</span>
+                                <span style="margin-left : 10px; margin-right: 10px;">|</span>
+                                <span>321 post</span>
+                                <span style="margin-left : 10px; margin-right: 10px;">|</span>
+                                <span>
+                                    <?php
+                                        $rating = 4;
+                                        for($i = 1 ; $i <= 5 ; $i++){
+                                            if($i <= $rating){
+                                                ?>
+                                                    <i class="fa fa-star" style="color: gold;" title="<?=$rating?>"></i>
+                                                <?php
+                                            }
+                                            else{
+                                                ?>
+                                                    <i class="fa fa-star"></i>
+                                                <?php
+                                            }
+                                               
+                                        }
+
+                                    ?>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2" style="margin-top : 10px;" align="right"> 
+                        <h3 style="float: left; position: relative; left : 50px;">#1</h3>                           
+                        <img src="img/icon/iconfinder_dots-dotted-option-menu-bullet_3643778.svg" alt="" style="width : 25px; ">
+                    </div>
+                    <hr width="100%">
+                    <div style="margin : 20px 40px 20px 40px;">
+                        <p style="font-size : 20px;">
+                            first komen dewe huhuhuhuuh .....
+                        </p>
+                    </div>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <img src="../img/112.jpg" alt="" style="width : 30px; height : 30px; border-radius: 100%; float: left; margin-right : 10px;">
+                        <p>
+                            trecyasella dan 25 lainnya memberi reputasi
+                        </p>
+                    </div>
+                    <hr width="100%">
+
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                        <i class="fa fa-bitbucket fa-lg" style="margin-right: 5px;"></i>
+                        <i class="fa fa-arrow-up fa-lg"></i>
+                        <i style="margin: 10px;"> 26 </i>
+                        <i class="fa fa-arrow-down fa-lg"></i>
+                        <i class="fa fa-eraser fa-lg" style="margin-left: 5px;"></i>
+                    </div>  
+
+                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6" align="right">
+                        <i class="fa fa-wechat fa-lg" style="margin-right: 20px;"> Kutip</i>
+                        <i class="fa fa-reply fa-lg"> Balas</i>
+                    </div>
+
+                    <a href="" style="margin: 20px 0px 0px 30px;">Lihat 1 Balasan Lainnya <i class="fa fa-arrow-down"></i> </a>
+                </div>
+
                 
                           
             </div>
@@ -329,6 +399,20 @@
 
                     <div class="single-sidebar-widget popular-post-widget">                        
                         <div class="popular-post-list" style="border-style: solid; height : 200px;"></div>
+                    </div>
+
+                    <div class="single-sidebar-widget popular-post-widget">                        
+                        <i class="fa fa-star fa-2x" style="float: left; margin-right: 5px; color : gold;"> </i> <h3>Moderator</h3>
+                        <div class="row" style="margin-top : 20px;">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-sm-6">
+                                <img src="../img/112.jpg" alt="" style="width : 30px; height: 30px; border-radius : 100%; float: left; margin-right : 10px;">
+                                <p>Syalala</p>
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-sm-6" align="right">
+                                <img src="../img/112.jpg" alt="" style="width : 30px; height: 30px; border-radius : 100%; float: left; margin-right : 10px;">
+                                <p>dubidubidam</p>
+                            </div>
+                        </div>
                     </div>
 
                 </div>

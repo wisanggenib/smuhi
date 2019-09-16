@@ -113,7 +113,7 @@
 				</div>
 				<nav id="nav-menu-container">
 				<ul class="nav-menu">
-                    <li class="menu-has-children"><a href="">Kategori</a>
+                    <li class="menu-has-children"><a href="index.php?page=produk">Kategori</a>
                         <ul>
                             <?php
                                 $sql = mysqli_query($config,"SELECT * FROM tbl_kategori");
