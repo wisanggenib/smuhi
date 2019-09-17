@@ -91,7 +91,7 @@
                     </div>
                     <div class="col-lg-3 col-md-3 col-sm-3">
                         <div class="col-lg-8 col-md-8" style="margin-top : 5px;">
-                            <p style="color: white;"><a href="login.php">MASUK</a> | <a href="b">DAFTAR</a> </p>
+                            <p style="color: white;"><a href="login.php">MASUK</a> | <a href="index.php?page=profile">DAFTAR</a> </p>
                         </div>
                         <div class="col-lg-4 col-md-4">
                             <a href="" class="btn btn-success">Buat Artikel</a>

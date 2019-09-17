@@ -20,6 +20,14 @@
                   include "pages/detail_produk.php";
             break;
 
+            case 'profile' :
+                  include "pages/profile.php";
+            break;
+
+            case 'tambah_artikel' :
+                  include "pages/tambah_artikel.php";
+            break;
+
 
             default :
                   include "pages/beranda.php";
