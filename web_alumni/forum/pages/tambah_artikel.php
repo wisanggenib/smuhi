@@ -36,8 +36,8 @@
                     <form class="col-lg-12 col-md-12">
                         <table class="table table-borderless">
                             <tr>
-                                <td>Judul Artikel</td>
-                                <td>:</td>
+                                <td width="15%">Judul Artikel</td>
+                                <td width="5%">:</td>
                                 <td>
                                     <input type="text" name="" class="form-control">
                                 </td>
@@ -56,10 +56,26 @@
                                     <input type="text" name="" class="form-control">
                                 </td>
                             </tr>
+                            <tr>
+                                <td colspan="3">
+                                    <textarea class="texteditor"></textarea>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Moderator</td>
+                                <td>:</td>
+                                <td>
+                                    <input type="text" name="" class="form-control" readonly>
+                                </td>
+                            </tr>
                         </table>
-                        <textarea class="texteditor">
+                        <div class="col-lg-12 col-md-12" align="right">
+                            <button type="submit" class="btn btn-success">Kirim</button>
+                            <button type="reset" class="btn btn-danger">Reset</button>
+                        </div>
+                        <!-- <textarea class="texteditor">
                             
-                        </textarea>
+                        </textarea> -->
                     </form>
                 </div>
 
