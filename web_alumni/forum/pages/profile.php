@@ -118,16 +118,31 @@
 
             <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7 posts-list">
                 
-                <div class="row" style="height: 50px; ">
-                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" align="center" style="border-style: solid;">
-                        <a href=""><h3>Artikel Saya</h3></a>
+                <div class="row">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <table class="table table-bordered">
+                            <tr align="center">
+                                <th style="background: aqua;">
+                                    <a href="" ><h3>Artikel Saya</h3></a>
+                                </th>
+                                <th>
+                                    <a href="" ><h3>Komentar Saya</h3></a>
+                                </th>
+                                <th>
+                                    <a href="" ><h3>Lapak Saya</h3></a>
+                                </th>
+                            </tr>
+                        </table>
                     </div>
-                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" align="center" style="border-style: solid;">
-                        <a href=""><h3>Komentar Saya</h3></a>
+                    <!-- <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" align="center" >
+                        <a href="" style="margin: 5px;"><h3>Artikel Saya</h3></a>
                     </div>
-                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" align="center" style="border-style: solid;">
-                        <a href=""><h3>Lapak Saya</h3></a>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" align="center" >
+                        <a href="" style="margin: 5px;"><h3>Komentar Saya</h3></a>
                     </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" align="center" >
+                        <a href="" style="margin: 5px;"><h3>Lapak Saya</h3></a>
+                    </div> -->
 
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="row">
@@ -187,14 +202,11 @@
                     <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2" style="margin-top : 10px;" align="right">                            
                         <img src="img/icon/iconfinder_dots-dotted-option-menu-bullet_3643778.svg" alt="" style="width : 25px;">
                     </div>
-                    <hr size="15px" width="100%">
-                    <div align="center" style="margin: 5px;">
-                        <h3>Stop Jangan Makan Mie Instan Pakai Nasi </h3>
-                    </div>                    
-                    <hr size="15px" width="100%">
                     <img src="../img/berita/pp1.jpg" alt="" width="100%" style="margin : 15px;">
-                    
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div align="center" style="margin: 5px; margin-left: 15px;">
+                        <h3>Stop Jangan Makan Mie Instan Pakai Nasi </h3>
+                    </div> 
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="margin-left: 15px;">
                         <div class="row">
                             <div style="margin-right : 20px;">
                                 <img src="img/icon/iconfinder_eye_226579.svg" alt="" style="width : 20px; float : left; margin-right : 5px;"> <i>1.374</i>
@@ -207,7 +219,7 @@
                     </div> 
                 </div>
 
-                <div class="row" style="margin-top : 15px;">
+                <div class="row" style="margin-top : 35px;">
                     <div class="col-lg-10 col-md-10 col-sm-10 col-xs-10" style ="margin-bottom : 20px;">
                         <img src="../img/112.jpg" alt="" width="50px" height = "50px" style="border-radius : 100%; float: left; margin-right : 10px;">
                         <div style="">
@@ -247,14 +259,11 @@
                     <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2" style="margin-top : 10px;" align="right">                            
                         <img src="img/icon/iconfinder_dots-dotted-option-menu-bullet_3643778.svg" alt="" style="width : 25px;">
                     </div>
-                    <hr size="15px" width="100%">
-                    <div align="center" style="margin: 5px;">
-                        <h3>Stop Jangan Makan Mie Instan Pakai Nasi </h3>
-                    </div>                    
-                    <hr size="15px" width="100%">
                     <img src="../img/berita/pp1.jpg" alt="" width="100%" style="margin : 15px;">
-                    
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                    <div align="center" style="margin: 5px; margin-left: 15px;">
+                        <h3>Stop Jangan Makan Mie Instan Pakai Nasi </h3>
+                    </div> 
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="margin-left: 15px;">
                         <div class="row">
                             <div style="margin-right : 20px;">
                                 <img src="img/icon/iconfinder_eye_226579.svg" alt="" style="width : 20px; float : left; margin-right : 5px;"> <i>1.374</i>
@@ -265,7 +274,7 @@
                         </div>   
                         <hr size="15px" width="100%">                                               
                     </div> 
-                </div>     
+                </div>    
 
                 <div class="row" style="margin-top : 20px;">
                     <div class="col-lg-6 col-md-6">

@@ -25,7 +25,44 @@
 
             <div class="col-lg-8 col-md-8 col-sm-8 posts-list">
                 
-                          
+                <div class="row">
+                    <div align="center">
+                        <h2 style="text-align: center;">Tambah Artikel</h2>
+                    </div>
+                    <hr size="15px" width="100%">
+                </div>
+
+                <div class="row">
+                    <form class="col-lg-12 col-md-12">
+                        <table class="table table-borderless">
+                            <tr>
+                                <td>Judul Artikel</td>
+                                <td>:</td>
+                                <td>
+                                    <input type="text" name="" class="form-control">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Kategori</td>
+                                <td>:</td>
+                                <td>
+                                    <input type="text" name="" class="form-control">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>Tags</td>
+                                <td>:</td>
+                                <td>
+                                    <input type="text" name="" class="form-control">
+                                </td>
+                            </tr>
+                        </table>
+                        <textarea class="texteditor">
+                            
+                        </textarea>
+                    </form>
+                </div>
+
             </div>            
 
             <div class="col-lg-4 col-md-4 col-sm-4 sidebar-widgets" >
