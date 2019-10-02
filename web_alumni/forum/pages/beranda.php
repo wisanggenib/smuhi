@@ -68,8 +68,8 @@
                     <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2" style="margin-top : 10px;" align="right">                            
                         <img src="img/icon/iconfinder_dots-dotted-option-menu-bullet_3643778.svg" alt="" style="width : 25px;">
                     </div>
-                    <img src="../img/berita/pp1.jpg" alt="" width="100%" style="margin-bottom : 15px;">
-                    <a href="index.php?page=artikel&&id=" style="color:black;">
+                    <a href="index.php?page=artikel&&id=" style="color:black; width: 100%;">
+                        <img src="../img/berita/pp1.jpg" alt="" width="100%" style="margin-bottom : 15px;">
                         <h3>Stop Jangan Makan Mie Instan Pakai Nasi </h3>
                     </a>
 
@@ -109,8 +109,11 @@
                     <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2" style="margin-top : 10px;" align="right">                            
                         <img src="img/icon/iconfinder_dots-dotted-option-menu-bullet_3643778.svg" alt="" style="width : 25px;">
                     </div>
-                    <img src="../img/berita/pp1.jpg" alt="" width="100%" style="margin-bottom : 15px;">
-                    <h3>Stop Jangan Makan Mie Instan Pakai Nasi </h3>
+                    <a href="index.php?page=artikel&&id=" style="color:black; width: 100%;">
+                        <img src="../img/berita/pp1.jpg" alt="" width="100%" style="margin-bottom : 15px;">
+                    
+                        <h3>Stop Jangan Makan Mie Instan Pakai Nasi </h3>
+                    </a>
 
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="row">

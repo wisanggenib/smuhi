@@ -77,24 +77,27 @@
                         <div class="row">
                             <div class="col-lg-4 col-md-4" align="center">
                                 <div style="border-style: solid; margin : 1px;">
-                                    <img src="img/img-01-hover.jpg" alt="" width="100%">
                                     <a href="index.php?page=detail_produk">
+                                        <img src="img/img-01-hover.jpg" alt="" width="100%">
+                                    
                                         <h3>Rp 47.000</h3>
                                     </a>
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-4" align="center">
                                 <div style="border-style: solid; margin : 1px;">
-                                    <img src="img/img-04-hover.jpg" alt="" width="100%">
-                                    <a href="">
+                                    <a href="index.php?page=detail_produk">    
+                                        <img src="img/img-04-hover.jpg" alt="" width="100%">
+                                    
                                         <h3>Rp 47.000</h3>
                                     </a>
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-4" align="center">
                                 <div style="border-style: solid; margin : 1px;">
-                                    <img src="img/img-02-hover.jpg" alt="" width="100%">
-                                    <a href="">
+                                    <a href="index.php?page=detail_produk">    
+                                        <img src="img/img-02-hover.jpg" alt="" width="100%">
+                                    
                                         <h3>Rp 47.000</h3>
                                     </a>
                                 </div>
@@ -111,11 +114,12 @@
                         <div class="row">
                             <div class="col-lg-4 col-md-4" align="center">
                                 <div style="border-style: solid; margin : 1px;">
-                                    <img src="img/img-04-hover.jpg" alt="" width="100%">
-                                    <div style="background : gold; width : 50px; position: absolute; top : -10px; right: 15px;">
-                                        <h4>45%<br>OFF</h4>
-                                    </div>
-                                    <a href="">
+                                    <a href="index.php?page=detail_produk">
+                                        <img src="img/img-04-hover.jpg" alt="" width="100%">
+                                        <div style="background : gold; width : 50px; position: absolute; top : -10px; right: 15px;">
+                                            <h4>45%<br>OFF</h4>
+                                        </div>
+                                    
                                         <h3>Rp 47.000</h3>
                                     </a>
                                     <div class="progress" style="margin: 10px;">
@@ -126,11 +130,11 @@
                             </div>
                             <div class="col-lg-4 col-md-4" align="center">
                                 <div style="border-style: solid; margin : 1px;">
-                                    <img src="img/img-02-hover.jpg" alt="" width="100%">
-                                    <div style="background : gold; width : 50px; position: absolute; top : -10px; right: 15px;">
-                                        <h4>55%<br>OFF</h4>
-                                    </div>
-                                    <a href="">
+                                    <a href="index.php?page=detail_produk">    
+                                        <img src="img/img-02-hover.jpg" alt="" width="100%">
+                                        <div style="background : gold; width : 50px; position: absolute; top : -10px; right: 15px;">
+                                            <h4>55%<br>OFF</h4>
+                                        </div>
                                         <h3>Rp 47.000</h3>
                                     </a>
                                     <div class="progress" style="margin: 10px;">
@@ -141,11 +145,12 @@
                             </div>
                             <div class="col-lg-4 col-md-4" align="center">
                                 <div style="border-style: solid; margin : 1px;">
-                                    <img src="img/img-01-hover.jpg" alt="" width="100%">
-                                    <div style="background : gold; width : 50px; position: absolute; top : -10px; right: 15px;">
-                                        <h4>50%<br>OFF</h4>
-                                    </div>
-                                    <a href="">
+                                    <a href="index.php?page=detail_produk">
+                                        <img src="img/img-01-hover.jpg" alt="" width="100%">
+                                        <div style="background : gold; width : 50px; position: absolute; top : -10px; right: 15px;">
+                                            <h4>50%<br>OFF</h4>
+                                        </div>
+                                    
                                         <h3>Rp 47.000</h3>
                                     </a>
                                     <div class="progress" style="margin: 10px;">
@@ -166,60 +171,62 @@
                         <div class="row">
                             <div class="col-lg-4 col-md-4" align="center">
                                 <div style="border-style: solid; margin : 1px; margin-bottom : 20px;">
-                                    <img src="img/img-01-hover.jpg" alt="" width="100%">
-                                    <p>Wireless Gaming Controller</p>
-                                    <a href="">
+                                    <a href="index.php?page=detail_produk">
+                                        <img src="img/img-01-hover.jpg" alt="" width="100%">
+                                        <p>Wireless Gaming Controller</p>
+                                        
                                         <h3>Rp 47.000</h3>
                                     </a>
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-4" align="center">
                                 <div style="border-style: solid; margin : 1px; margin-bottom : 20px;">
-                                    <img src="img/img-04-hover.jpg" alt="" width="100%">
-                                    <div style="background : gold; width : 50px; position: absolute; top : -10px; right: 15px;">
-                                        <h4>45%<br>OFF</h4>
-                                    </div>
-                                    <p>indoor security camera</p>
-                                    <a href="">
+                                    <a href="index.php?page=detail_produk">
+                                        <img src="img/img-04-hover.jpg" alt="" width="100%">
+                                        <div style="background : gold; width : 50px; position: absolute; top : -10px; right: 15px;">
+                                            <h4>45%<br>OFF</h4>
+                                        </div>
+                                        <p>indoor security camera</p>
                                         <h3>Rp 47.000</h3>
                                     </a>
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-4" align="center">
                                 <div style="border-style: solid; margin : 1px; margin-bottom : 20px;">
-                                    <img src="img/img-02-hover.jpg" alt="" width="100%">
-                                    <p>Wifi Action Camera</p>
-                                    <a href="">
+                                    <a href="index.php?page=detail_produk">
+                                        <img src="img/img-02-hover.jpg" alt="" width="100%">
+                                        <p>Wifi Action Camera</p>
+
                                         <h3>Rp 47.000</h3>
                                     </a>
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-4" align="center">
                                 <div style="border-style: solid; margin : 1px; margin-bottom : 20px;">
-                                    <img src="img/img-01-hover.jpg" alt="" width="100%">
-                                    <p>Wireless Gaming Controller</p>
-                                    <a href="">
+                                    <a href="index.php?page=detail_produk">
+                                        <img src="img/img-01-hover.jpg" alt="" width="100%">
+                                        <p>Wireless Gaming Controller</p>
                                         <h3>Rp 47.000</h3>
                                     </a>
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-4" align="center">
                                 <div style="border-style: solid; margin : 1px; margin-bottom : 20px;">
-                                    <img src="img/img-04-hover.jpg" alt="" width="100%">
-                                    <p>indoor security camera</p>
-                                    <a href="">
+                                    <a href="index.php?page=detail_produk">
+                                        <img src="img/img-04-hover.jpg" alt="" width="100%">
+                                        <p>indoor security camera</p>
                                         <h3>Rp 47.000</h3>
                                     </a>
                                 </div>
                             </div>
                             <div class="col-lg-4 col-md-4" align="center">
                                 <div style="border-style: solid; margin : 1px; margin-bottom : 20px;">
-                                    <img src="img/img-02-hover.jpg" alt="" width="100%">
-                                    <div style="background : gold; width : 50px; position: absolute; top : -10px; right: 15px;">
-                                        <h4>45%<br>OFF</h4>
-                                    </div>
-                                    <p>Wifi Action Camera</p>
-                                    <a href="">
+                                    <a href="index.php?page=detail_produk">
+                                        <img src="img/img-02-hover.jpg" alt="" width="100%">
+                                        <div style="background : gold; width : 50px; position: absolute; top : -10px; right: 15px;">
+                                            <h4>45%<br>OFF</h4>
+                                        </div>
+                                        <p>Wifi Action Camera</p>
                                         <h3>Rp 47.000</h3>
                                     </a>
                                 </div>

@@ -36,12 +36,12 @@
         <div class="row align-items-center justify-content-between d-flex" >
 				<nav id="nav-menu-container">
                     <ul class="nav-menu" style="position: relative; top : -50px;">
-                        <li><a href="index.php?page=" style="color: black; font-size: 24px;">Beranda</a></li>
-                        <li><a href="" style="color: black; font-size: 24px;">Tentang</a></li>
-                        <li><a href="" style="color: black; font-size: 24px;">Teman</a></li>
-                        <li><a href="" style="color: black; font-size: 24px;">Galeri</a></li>
-                        <li><a href="" style="color: black; font-size: 24px;">Arsip</a></li>
-                        <li><a href="" style="color: black; font-size: 24px;">Edit Profil</a></li>
+                        <li><a href="index.php?page=" style="color: black; font-size: 18px;">Beranda</a></li>
+                        <li><a href="" style="color: black; font-size: 18px;">Tentang</a></li>
+                        <li><a href="" style="color: black; font-size: 18px;">Teman</a></li>
+                        <li><a href="" style="color: black; font-size: 18px;">Galeri</a></li>
+                        <li><a href="" style="color: black; font-size: 18px;">Arsip</a></li>
+                        <li><a href="" style="color: black; font-size: 18px;">Edit Profil</a></li>
                     </ul>
 				</nav><!-- #nav-menu-container -->
 			</div>
@@ -134,15 +134,6 @@
                             </tr>
                         </table>
                     </div>
-                    <!-- <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" align="center" >
-                        <a href="" style="margin: 5px;"><h3>Artikel Saya</h3></a>
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" align="center" >
-                        <a href="" style="margin: 5px;"><h3>Komentar Saya</h3></a>
-                    </div>
-                    <div class="col-lg-4 col-md-4 col-sm-4 col-xs-4" align="center" >
-                        <a href="" style="margin: 5px;"><h3>Lapak Saya</h3></a>
-                    </div> -->
 
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
                         <div class="row">
@@ -202,10 +193,12 @@
                     <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2" style="margin-top : 10px;" align="right">                            
                         <img src="img/icon/iconfinder_dots-dotted-option-menu-bullet_3643778.svg" alt="" style="width : 25px;">
                     </div>
-                    <img src="../img/berita/pp1.jpg" alt="" width="100%" style="margin : 15px;">
-                    <div align="center" style="margin: 5px; margin-left: 15px;">
-                        <h3>Stop Jangan Makan Mie Instan Pakai Nasi </h3>
-                    </div> 
+                    <a href="index.php?page=artikel&&id=" style="color:black; width: 100%;">
+                        <img src="../img/berita/pp1.jpg" alt="" width="100%" style="margin : 15px;">
+                        <div style="margin: 5px; margin-left: 15px;">
+                            <h3>Stop Jangan Makan Mie Instan Pakai Nasi </h3>
+                        </div> 
+                    </a>
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="margin-left: 15px;">
                         <div class="row">
                             <div style="margin-right : 20px;">
@@ -259,10 +252,12 @@
                     <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2" style="margin-top : 10px;" align="right">                            
                         <img src="img/icon/iconfinder_dots-dotted-option-menu-bullet_3643778.svg" alt="" style="width : 25px;">
                     </div>
-                    <img src="../img/berita/pp1.jpg" alt="" width="100%" style="margin : 15px;">
-                    <div align="center" style="margin: 5px; margin-left: 15px;">
-                        <h3>Stop Jangan Makan Mie Instan Pakai Nasi </h3>
-                    </div> 
+                    <a href="index.php?page=artikel&&id=" style="color:black; width: 100%;">
+                        <img src="../img/berita/pp1.jpg" alt="" width="100%" style="margin : 15px;">
+                        <div style="margin: 5px; margin-left: 15px;">
+                            <h3>Stop Jangan Makan Mie Instan Pakai Nasi </h3>
+                        </div> 
+                    </a>
                     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="margin-left: 15px;">
                         <div class="row">
                             <div style="margin-right : 20px;">
