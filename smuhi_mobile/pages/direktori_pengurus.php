@@ -1,12 +1,12 @@
-<section class="banner-area relative" id="home">
+<section class="banner-area relative" id="home" style="height: 250px;">
 	<div class="overlay overlay-bg"></div>
 	<div class="container">
 		<div class="row d-flex align-items-center justify-content-center">
-			<div class="about-content col-lg-12">
+			<div class="about-content col-lg-12" style="top : -75px;">
 				<h1 class="text-white">
-					<span style="font-family: Montserrat-Light">DIREKTORI PENGURUS
+					<span style="font-family: Montserrat-Light; font-size : 20px;">DIREKTORI PENGURUS
           <br>
-          ALUMNI</span> <span style="font-family: Montserrat-Bold">MUHI</span>
+          ALUMNI</span> <span style="font-family: Montserrat-Bold; font-size : 20px;">MUHI</span>
 				</h1>
 				<p class="text-white link-nav"><a href="index.php?page=dashboard">Home </a>  <span class="lnr lnr-arrow-right"></span> Tentang Kami <span class="lnr lnr-arrow-right"></span> Direktori Pengururs Alumni MUHI </p>
 			</div>
@@ -20,7 +20,7 @@
 		<div class="row d-flex justify-content-center">
 			<div class="menu-content pb-70 col-lg-8">
 				<div class="title text-center">
-					<h1 class="mb-10"><span style="font-family: Montserrat-Light">DIREKTORI PENGURUS <br>ALUMNI</span> <span style="font-family: Montserrat-Bold">MUHI </span></h1>
+					<h3 class="mb-10"><span style="font-family: Montserrat-Light">DIREKTORI PENGURUS <br>ALUMNI</span> <span style="font-family: Montserrat-Bold">MUHI </span></h3>
 				</div>
 			</div>
 		</div>
