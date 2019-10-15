@@ -1,0 +1,46 @@
+[25-Sep-2019 22:20:29 America/New_York] PHP Notice:  Undefined variable: ub in /home/musatdld/public_html/beta/function.php on line 91
+[25-Sep-2019 22:20:29 America/New_York] PHP Notice:  Undefined variable: ub in /home/musatdld/public_html/beta/function.php on line 103
+[25-Sep-2019 22:20:29 America/New_York] PHP Notice:  Undefined variable: ub in /home/musatdld/public_html/beta/function.php on line 91
+[25-Sep-2019 22:20:29 America/New_York] PHP Notice:  Undefined variable: ub in /home/musatdld/public_html/beta/function.php on line 103
+[25-Sep-2019 22:20:29 America/New_York] PHP Notice:  Undefined variable: ub in /home/musatdld/public_html/beta/function.php on line 91
+[25-Sep-2019 22:20:29 America/New_York] PHP Notice:  Undefined variable: ub in /home/musatdld/public_html/beta/function.php on line 103
+[25-Sep-2019 22:20:29 America/New_York] PHP Notice:  Undefined variable: ub in /home/musatdld/public_html/beta/function.php on line 91
+[25-Sep-2019 22:20:29 America/New_York] PHP Notice:  Undefined variable: ub in /home/musatdld/public_html/beta/function.php on line 103
+[02-Oct-2019 09:29:22 America/New_York] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/musatdld/public_html/beta/index.php on line 398
+[02-Oct-2019 09:30:05 America/New_York] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/musatdld/public_html/beta/index.php on line 398
+[02-Oct-2019 09:36:55 America/New_York] PHP Notice:  Undefined index: pengunjung_minggu in /home/musatdld/public_html/beta/index.php on line 405
+[02-Oct-2019 09:37:19 America/New_York] PHP Notice:  Undefined index: pengunjung_minggu in /home/musatdld/public_html/beta/index.php on line 405
+[02-Oct-2019 09:38:31 America/New_York] PHP Notice:  Undefined index: pengunjung_minggu in /home/musatdld/public_html/beta/index.php on line 405
+[02-Oct-2019 09:39:21 America/New_York] PHP Notice:  Undefined index: pengunjung_minggu in /home/musatdld/public_html/beta/index.php on line 405
+[02-Oct-2019 09:39:45 America/New_York] PHP Notice:  Undefined index: jumlah_pengunjung in /home/musatdld/public_html/beta/index.php on line 404
+[02-Oct-2019 09:39:45 America/New_York] PHP Notice:  Undefined index: pengunjung_minggu in /home/musatdld/public_html/beta/index.php on line 405
+[02-Oct-2019 09:40:02 America/New_York] PHP Notice:  Undefined index: jumlah_pengunjung in /home/musatdld/public_html/beta/index.php on line 404
+[02-Oct-2019 09:40:02 America/New_York] PHP Notice:  Undefined index: pengunjung_minggu in /home/musatdld/public_html/beta/index.php on line 405
+[02-Oct-2019 09:40:19 America/New_York] PHP Notice:  Undefined index: pengunjung_minggu in /home/musatdld/public_html/beta/index.php on line 405
+[02-Oct-2019 09:40:46 America/New_York] PHP Notice:  Undefined index: pengunjung_minggu in /home/musatdld/public_html/beta/index.php on line 405
+[02-Oct-2019 09:42:09 America/New_York] PHP Notice:  Undefined index: jumlah_pengunjung in /home/musatdld/public_html/beta/index.php on line 403
+[02-Oct-2019 09:42:09 America/New_York] PHP Notice:  Undefined variable: result3 in /home/musatdld/public_html/beta/index.php on line 404
+[02-Oct-2019 09:42:35 America/New_York] PHP Notice:  Undefined index: pengunjung_minggu in /home/musatdld/public_html/beta/index.php on line 403
+[02-Oct-2019 09:42:35 America/New_York] PHP Notice:  Undefined variable: result3 in /home/musatdld/public_html/beta/index.php on line 404
+[02-Oct-2019 09:45:08 America/New_York] PHP Notice:  Undefined index: jumlah_pengunjung in /home/musatdld/public_html/beta/index.php on line 407
+[02-Oct-2019 09:53:26 America/New_York] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/musatdld/public_html/beta/index.php on line 414
+[02-Oct-2019 09:53:56 America/New_York] PHP Notice:  Undefined index: date_create in /home/musatdld/public_html/beta/index.php on line 416
+[02-Oct-2019 09:57:44 America/New_York] PHP Notice:  Undefined index: username in /home/musatdld/public_html/beta/pages/detail_opini.php on line 31
+[02-Oct-2019 09:57:53 America/New_York] PHP Notice:  Undefined index: username in /home/musatdld/public_html/beta/pages/detail_opini.php on line 31
+[02-Oct-2019 09:58:53 America/New_York] PHP Notice:  Undefined index: username in /home/musatdld/public_html/beta/pages/beritaalumni.php on line 61
+[02-Oct-2019 09:58:53 America/New_York] PHP Notice:  Undefined index: username in /home/musatdld/public_html/beta/pages/beritaalumni.php on line 61
+[02-Oct-2019 10:04:18 America/New_York] PHP Notice:  Undefined index: username in /home/musatdld/public_html/beta/pages/beritaalumni.php on line 61
+[02-Oct-2019 10:04:18 America/New_York] PHP Notice:  Undefined index: username in /home/musatdld/public_html/beta/pages/beritaalumni.php on line 61
+[02-Oct-2019 10:04:20 America/New_York] PHP Notice:  Undefined index: id in /home/musatdld/public_html/beta/pages/detail_opini.php on line 23
+[02-Oct-2019 10:04:20 America/New_York] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/musatdld/public_html/beta/pages/detail_opini.php on line 25
+[02-Oct-2019 10:04:20 America/New_York] PHP Notice:  Undefined index: id in /home/musatdld/public_html/beta/pages/detail_opini.php on line 54
+[02-Oct-2019 10:04:20 America/New_York] PHP Notice:  Undefined index: id in /home/musatdld/public_html/beta/pages/detail_opini.php on line 74
+[02-Oct-2019 10:04:20 America/New_York] PHP Warning:  mysqli_fetch_array() expects parameter 1 to be mysqli_result, boolean given in /home/musatdld/public_html/beta/pages/detail_opini.php on line 76
+[02-Oct-2019 10:06:56 America/New_York] PHP Notice:  Undefined index: username in /home/musatdld/public_html/beta/pages/beritaalumni.php on line 61
+[02-Oct-2019 10:06:56 America/New_York] PHP Notice:  Undefined index: username in /home/musatdld/public_html/beta/pages/beritaalumni.php on line 61
+[02-Oct-2019 10:07:25 America/New_York] PHP Notice:  Undefined index: username in /home/musatdld/public_html/beta/pages/beritaalumni.php on line 61
+[02-Oct-2019 10:07:25 America/New_York] PHP Notice:  Undefined index: username in /home/musatdld/public_html/beta/pages/beritaalumni.php on line 61
+[02-Oct-2019 10:07:27 America/New_York] PHP Notice:  Undefined index: username in /home/musatdld/public_html/beta/pages/beritaalumni.php on line 61
+[02-Oct-2019 10:07:31 America/New_York] PHP Notice:  Undefined index: username in /home/musatdld/public_html/beta/pages/beritaalumni.php on line 61
+[02-Oct-2019 10:07:31 America/New_York] PHP Notice:  Undefined index: username in /home/musatdld/public_html/beta/pages/beritaalumni.php on line 61
+[02-Oct-2019 10:07:35 America/New_York] PHP Notice:  Undefined index: username in /home/musatdld/public_html/beta/pages/beritaalumni.php on line 61

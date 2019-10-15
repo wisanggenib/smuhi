@@ -1,0 +1,10 @@
+[06-Oct-2019 23:15:45 America/New_York] PHP Notice:  Undefined index: username in /home/musatdld/public_html/beta/forum/pages/tambah_artikel.php on line 93
+[06-Oct-2019 23:17:57 America/New_York] PHP Notice:  Undefined index: username in /home/musatdld/public_html/beta/forum/pages/tambah_artikel.php on line 93
+[06-Oct-2019 23:21:17 America/New_York] PHP Warning:  A non-numeric value encountered in /home/musatdld/public_html/beta/forum/pages/profile.php on line 243
+[06-Oct-2019 23:21:17 America/New_York] PHP Warning:  A non-numeric value encountered in /home/musatdld/public_html/beta/forum/pages/profile.php on line 247
+[06-Oct-2019 23:21:23 America/New_York] PHP Warning:  A non-numeric value encountered in /home/musatdld/public_html/beta/forum/pages/artikel.php on line 195
+[06-Oct-2019 23:21:23 America/New_York] PHP Warning:  A non-numeric value encountered in /home/musatdld/public_html/beta/forum/pages/artikel.php on line 199
+[06-Oct-2019 23:29:55 America/New_York] PHP Warning:  A non-numeric value encountered in /home/musatdld/public_html/beta/forum/pages/profile.php on line 243
+[06-Oct-2019 23:29:55 America/New_York] PHP Warning:  A non-numeric value encountered in /home/musatdld/public_html/beta/forum/pages/profile.php on line 247
+[06-Oct-2019 23:30:07 America/New_York] PHP Warning:  A non-numeric value encountered in /home/musatdld/public_html/beta/forum/pages/profile.php on line 243
+[06-Oct-2019 23:30:07 America/New_York] PHP Warning:  A non-numeric value encountered in /home/musatdld/public_html/beta/forum/pages/profile.php on line 247
