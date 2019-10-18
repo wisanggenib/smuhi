@@ -1,12 +1,12 @@
-<section class="banner-area relative" id="home" style="height : 350px;">
+<section class="banner-area relative" id="home" style="height : 200px;">
     <div class="overlay overlay-bg"></div>
     <div class="container">
         <div class="row d-flex align-items-center justify-content-center">
-            <div class="about-content col-lg-12">
-                <h1 class="text-uppercase text-white" align="right">
+            <div class="about-content col-lg-12" style="top: -50px; right: 30px;">
+                <h5 class="text-uppercase text-white" align="right">
                     Selamat Datang Alumni<br>
                     SMA 1 Muhammadiyah Yogyakarta
-                </h1>
+                </h5>
             </div>
         </div>
     </div>
@@ -28,13 +28,13 @@
                                 <li style="margin-bottom : 10px; margin-left : 10px;">
                                     <a href="index.php?page=kategori&&id_kategori=<?=$data['id_kategori']?>" style="color : black;">
                                         <img src="img/icon/iconfinder_tag_115791.svg" alt="" width="20px"> <?=$data['nama_kategori']?>
-                                    </a>   
+                                    </a>
                                 </li>
                                 <?php
                             }
                             ?>
                         </ul>
-                    </div>  
+                    </div>
                     <div class="row" style="height : 800px; border-style: solid; margin-right : 5px;"></div>
                 </div>
 
@@ -42,15 +42,15 @@
 
             <div class="col-lg-6 col-md-6 col-sm-6 posts-list">
                 <div class="row">
-                    <div align="left" class="col-lg-10">                    
+                    <div align="left" class="col-lg-10">
                         <h3 style="color : black;">
-                            <img src="img/icon/iconfinder_Icon_Element_Fire_02_513727.svg" alt=""> 
-                            Thread Terpanas                        
+                            <img src="img/icon/iconfinder_Icon_Element_Fire_02_513727.svg" alt="">
+                            Thread Terpanas
                         </h3>
                     </div>
                     <div align="right" class="col-lg-2" style="margin-top : 25px;">
-                        <img src="img/icon/iconfinder_6.list-menu_4201272.svg" alt="" width="20px;" style="margin-right : 5px;"> 
-                        <img src="img/icon/iconfinder_26.browser-website_4201264.svg" alt="" width="20px;"> 
+                        <img src="img/icon/iconfinder_6.list-menu_4201272.svg" alt="" width="20px;" style="margin-right : 5px;">
+                        <img src="img/icon/iconfinder_26.browser-website_4201264.svg" alt="" width="20px;">
                     </div>
                 </div>
                                 <?php
@@ -68,7 +68,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2" style="margin-top : 10px;" align="right">                            
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2" style="margin-top : 10px;" align="right">
                         <img src="img/icon/iconfinder_dots-dotted-option-menu-bullet_3643778.svg" alt="" style="width : 25px;">
                     </div>
                     <a href="index.php?page=artikel&&id_thread=<?php echo $data['id_thread'] ?>" style="color:black; width: 100%;">
@@ -84,8 +84,8 @@
                             <div>
                                 <img src="img/icon/iconfinder_right-forward-next-turn-share_3643739.svg" alt="" style="width : 20px; float : left; margin-right : 5px;"> <i>56</i>
                             </div>
-                        </div>   
-                        <hr size="15px" width="100%">                                               
+                        </div>
+                        <hr size="15px" width="100%">
                     </div>
 
                     <h5>BagusHehe</h5>
@@ -94,24 +94,24 @@
                     </div>
                     <a href="">
                         <i>Lihat Komentar Lain</i>
-                    </a>   
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="height : 5px; background: gray; margin-top : 15px; margin-bottom : 15px;"></div>                 
-                </div> 
-<?php 
+                    </a>
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="height : 5px; background: gray; margin-top : 15px; margin-bottom : 15px;"></div>
+                </div>
+<?php
 }
  ?>
-  
+
                 <div class="row" style="height : 200px; border-style: solid">
 
                 </div>
 
             </div>
-            
+
 
             <div class="col-lg-4 col-md-4 col-sm-4 sidebar-widgets" >
                 <div class="widget-wrap">
                     <div class="single-sidebar-widget popular-post-widget" style="position : relative;top : -40px;">
-                        <?php 
+                        <?php
                         if (!empty($_SESSION['username'])) {
                             ?>
                            <a href="index.php?page=tambah_artikel"><h4 class="popular-title" style="background : gold; color: black;">Buat Artikel</h4></a>
@@ -162,7 +162,7 @@
                                 <a href="index.php?page=lowongan_kerja">Lihat Selengkapnya <i class="fa fa-chevron-circle-right"></i></a>
                             </div>
                         </div>
-                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="height : 5px; background: yellow; margin-top : 15px; margin-bottom : 15px;"></div>   
+                        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="height : 5px; background: yellow; margin-top : 15px; margin-bottom : 15px;"></div>
                     </div>
 
                     <div class="single-sidebar-widget popular-post-widget">
@@ -236,7 +236,7 @@
                             <div class="" align ="right">
                                 <a href="index.php?page=lowongan_kerja">Lihat Selengkapnya <i class="fa fa-chevron-circle-right"></i></a>
                             </div>
-                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="height : 5px; background: yellow; margin-top : 15px; margin-bottom : 15px;"></div>   
+                            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" style="height : 5px; background: yellow; margin-top : 15px; margin-bottom : 15px;"></div>
                         </div>
                     </div>
                 </div>

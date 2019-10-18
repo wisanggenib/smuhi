@@ -79,14 +79,10 @@ session_start();
       <div class="header-top">
          <div class="container">
             <div class="row">
-               <div class="col-lg-2 col-sm-2 col-sm-2 header-top-left no-padding" style="margin-top: 5px; ">
-                <h3 style="color: white;">FORUM MUHI</h3>
+               <div class="col-lg-2 col-sm-2 col-sm-2 col-2 header-top-left no-padding" style="margin-top: 5px; ">
+                <h5 style="color: white; font-size : 10px;">FORUM MUHI</h5>
             </div>
-            <div class="col-lg-3 col-sm-3 col-sm-3">
-                <div class="col-lg-3 col-md-3 col-sm-3" align="right" style="margin-top: 5px; ">
-                    <p style="color : white;">ID</p>
-                </div>
-                <div class="col-lg-9 col-md-9 col-sm-9">
+            <div class="col-lg-3 col-sm-3 col-sm-3 col-3">
                     <form>
                         <div class="input-group" >
                             <!-- <a href="#">ID</a> -->
@@ -94,10 +90,9 @@ session_start();
                             <input id="pencarian" type="text" class="form-control" name="pencarian" placeholder="pencarian">
                         </div>
                     </form>
-                </div>
             </div>
-            <div class="col-lg-3 col-md-3 col-sm-3">
-                <div class="col-lg-8 col-md-8" style="margin-top : 5px;">
+            <div class="col-lg-3 col-md-3 col-sm-3 col-3">
+                <div class="col-lg-8 col-md-8 col-8" style="margin-top : 5px;">
                     <?php 
                     if (!empty($_SESSION['username'])) {
                         ?>
@@ -111,12 +106,12 @@ session_start();
 
                     ?>
                 </div>
-                <div class="col-lg-4 col-md-4">
+                <div class="col-lg-4 col-md-4 col-4" style="top: -5px;">
                     
                     <?php 
                     if (!empty($_SESSION['username'])) {
                         ?>
-                    <a href="index.php?page=profile" class="btn btn-success">Profile</a>
+                    <a href="index.php?page=profile" class="btn btn-success" >Profile</a>
                         <?php
                     }else{
                         ?>
@@ -127,7 +122,7 @@ session_start();
                     ?>
                 </div>
             </div>
-            <div class="col-lg-4 col-md-4 col-sm-4" >
+            <div class="col-lg-4 col-md-4 col-sm-4 col-4" >
                 <div class="input-group" style="margin-left : 15px;">
                     <span class="input-group-addon"><i class="fa fa-search" style=""></i></span>
                     <input id="pencarian" type="text" class="form-control" name="pencarian" placeholder="Buat Rekaman">
@@ -139,7 +134,7 @@ session_start();
 <div class="container" >
  <div class="row align-items-center justify-content-between d-flex" >
     <div id="logo">
-        <a href="index.php"><img src="img/logo1.png" width="40%;" alt="" title="" /></a>
+        <a href="index.php"><img src="img/logo1.png" width="20%;" alt="" title="" /></a>
     </div>
     <nav id="nav-menu-container">
         <ul class="nav-menu">
@@ -194,16 +189,18 @@ include "load_pages.php";
         <h3>Langganan</h3>
         <hr size = "15px;" color= "#FFFF00" width = "50px"; align="left">
         <form class="form-group" action="#" method="post">
-            <div class="col-lg-9 col-md-9 col-sm-9">
-                <input type="text" name="email" value="" class="form-control" placeholder="Masukkan Email Anda">
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-3">
-                <button type="submit" name="send_email" class="btn btn-primary"><i class="fa fa-send"></i></button>
-            </div>
+            <div class="row">
+                <div class="col-lg-9 col-md-9 col-sm-9 col-7">
+                    <input type="text" name="email" value="" class="form-control" placeholder="Masukkan Email Anda">
+                </div>
+                <div class="col-lg-3 col-md-3 col-sm-3 col-3">
+                    <button type="submit" name="send_email" class="btn btn-primary"><i class="fa fa-send"></i></button>
+                </div>
+            </div>            
         </form>
     </div>
-    <div class="col-lg-3 col-md-3">
-        <h3>Forum MUHI</h3>
+    <div class="col-lg-3 col-md-3 col-5">
+        <h5>Forum MUHI</h5>
         <hr size = "15px;" color= "#FFFF00" width = "50px"; align="left">
         <ul>
             <li>Pusat Bantuan</li>
@@ -213,8 +210,8 @@ include "load_pages.php";
             <li>Kebijakan Privasi</li>
         </ul>
     </div>
-    <div class="col-lg-3 col-md-3">
-        <h3>Navigasi</h3>
+    <div class="col-lg-3 col-md-3 col-3">
+        <h5>Navigasi</h5>
         <hr size = "15px;" color= "#FFFF00" width = "50px"; align="left">
         <ul>
             <li>Forum</li>
@@ -224,8 +221,8 @@ include "load_pages.php";
             <li>Widgets</li>
         </ul>
     </div>
-    <div class="col-lg-2 col-md-2">
-        <h3>Jual Beli</h3>
+    <div class="col-lg-2 col-md-2 col-4">
+        <h5>Jual Beli</h5>
         <hr size = "15px;" color= "#FFFF00" width = "50px"; align="left">
         <ul>
             <li>Cara Jual</li>
@@ -235,15 +232,15 @@ include "load_pages.php";
         </ul>
     </div>
 </div>
-<div class="row">
-    <div class="col-lg-12 col-md-13" align="center">
+<div class="row" style="margin-top: 20px;">
+    <div class="col-lg-12 col-md-12" align="center">
         <h3>Recent Active Members</h3>
         <br>
         <?php
         $sql = mysqli_query($config, "SELECT * FROM tbl_alumni LIMIT 10");
         while($data = mysqli_fetch_array($sql)){
             ?>
-            <img src="../img/<?=$data['images']?>" alt="" style="width: 50px; height: 50px; border-radius : 100%; margin : 10px;">
+            <img src="../img/<?=$data['images']?>" alt="" style="width: 20px; height: 20px; border-radius : 100%; margin : 10px;">
             <?php
         }
         ?>
